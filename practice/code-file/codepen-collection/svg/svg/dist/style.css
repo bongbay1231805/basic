@@ -1,0 +1,192 @@
+/** @format */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: #e0e0e0;
+  overflow: hidden;
+}
+span {
+  overflow: hidden;
+  display: block;
+}
+.loader-wrap {
+  position: absolute;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+.loader-wrap svg {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 110vh;
+}
+.loader-wrap .loader-wrap-heading h1 {
+  font-size: 120px;
+  z-index: 20;
+  color: #e0e0e0;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-family: 'Ogg';
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110vh;
+  width: 100%;
+}
+.container h1 {
+  font-family: 'Ogg';
+  font-weight: lighter;
+  font-size: 100px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .loader-wrap svg {
+    width: 200vw;
+    margin-left: -50vw;
+  }
+  .loader-wrap .loader-wrap-heading,
+  .container h1 {
+    font-size: 60px;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  width: 100%;
+  padding: 20px 7%;
+  margin-top: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 50px;
+  gap: 30px;
+  z-index: 10;
+}
+
+nav img {
+  height: 50px;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.navbar li {
+  display: inline-block; /* In einer Zeile anzeigen */
+  margin-left: 5vw; /* Abstand zwischen den Links */
+  white-space: nowrap;
+
+  transform: translate3d(0px 0px);
+  visibility: inherit;
+
+  transition: 0.8s;
+}
+
+.navbar ul li a {
+  text-decoration: none; /* Keine Standard-Unterstreichung für Links */
+  color: rgb(90, 88, 88); /* Schwarzer Text */
+  font-weight: bold; /* Fettschrift */
+  font-size: 15px; /* Schriftgröße 15 Pixel */
+  position: relative; /* Position relativ zum normalen Fluss des Dokuments */
+}
+/* Unterstrichene Linie vor dem Link, die bei Hover sichtbar wird */
+.navbar a::before {
+  content: ''; /* Leerer Inhalt für das Pseudoelement */
+  position: absolute; /* Absolute Positionierung relativ zum Link */
+  top: 100%; /* Am unteren Rand des Links positionieren */
+  left: 0; /* Ganz links innerhalb des Links positionieren */
+  width: 0; /* Ursprünglich unsichtbare Linie (Breite 0) */
+  height: 2px; /* Höhe der unterstrichenen Linie */
+  background: black; /* Weiße Hintergrundfarbe für die Linie */
+  transition: 0.3s; /* Übergangsanimation mit 0,3 Sekunden Dauer */
+}
+
+/* Linie wird sichtbar, wenn der Link gehovered wird */
+.navbar a:hover::before,
+.navbar a.active::before {
+  width: 100%; /* Linie wird sichtbar (Breite 100%) bei Hover */
+}
+
+.navbar a.active {
+  color: rgba(216, 108, 108, 0.932);
+}
+.navbar ul li a:hover {
+  text-decoration: none; /* Unterstrichen*/
+  color: rgba(216, 108, 108, 0.932); /* Farbe ändern, wenn der Link hover ist (optional) */
+  transition: color 0.3s ease;
+  /*box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.3s ease; Kasten um menu links*/
+  /*padding: 5px 10px; Abstand beim draufzeigen vergrößern
+      border-radius: 5px; abrunden der ecken
+      background-color: #d23a3a; Hintergrundfarbe des Menu-links*/
+}
+
+.navbar li.hide {
+  transform: translateY(-15px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* initial styles */
+.btn {
+  display: flex;
+  position: relative;
+  padding: 18px 50px;
+  color: rgb(90, 88, 88);
+  background-color: white;
+  border-radius: 30px;
+  font-weight: bold; /* Fettschrift */
+  font-size: 15px; /* Schriftgröße 18 Pixel */
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 10;
+}
+.btn:hover {
+  color: white;
+}
+
+.btn span {
+  display: block;
+  width: 0px;
+  height: 0px;
+  background-color: black;
+  position: absolute;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: width 0.6s ease 0s, height 0.6s ease 0s;
+  z-index: -1;
+}
+
+.btn:hover span {
+  width: 600px;
+  height: 600px;
+}

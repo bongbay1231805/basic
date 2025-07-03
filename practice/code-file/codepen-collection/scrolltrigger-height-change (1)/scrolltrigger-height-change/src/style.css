@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.slider-wrap {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 50vh 0;
+}
+
+img {
+  width: 50vw;
+  max-width: 350px;
+  height: 60vw;
+  max-height: 450px;
+  object-fit: cover;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+button {
+  position: fixed;
+  z-index: 99;
+  top: 24px;
+  left: 24px;
+}
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,35 @@
+<section id="gallery-wrapper" class="gallery-wrapper">
+
+	<div id="gallery-images" class="gallery-images">
+		<img src="https://images.pexels.com/photos/33550/cows-curious-cattle-agriculture.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="cors" style="opacity: 1;">
+		<img src="https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" akt="cliffs">
+		<img src="https://images.pexels.com/photos/210243/pexels-photo-210243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="mountains">
+		<img src="https://images.pexels.com/photos/338936/pexels-photo-338936.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="forest">
+	</div>
+
+	<nav>
+		<button type="button" nav-btn="prev" id="btn-prev">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-left">
+				<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+				<path d="M15 6l-6 6l6 6" />
+			</svg>
+		</button>
+		<div id="dots" class="thumbs"></div>
+		<button type="button" nav-btn="next" id="btn-next">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right">
+				<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+				<path d="M9 6l6 6l-6 6" />
+			</svg>
+		</button>
+	</nav>
+	<p class="hashtag">#cpc-svg-filters #codepenchallenge</p>
+	<section>
+
+		<!-- template - svg filter -->
+		<svg id="svg">
+			<filter id="wavy">
+				<feTurbulence id="turbulence" type="turbulence" baseFrequency="0" numOctaves="1" result="NOISE"></feTurbulence>
+				<feDisplacementMap id="displacementMap" in="SourceGraphic" in2="NOISE" scale="20"></feDisplacementMap>
+				<animate xlink:href="#turbulence" attributeName="baseFrequency" dur="2s" keyTimes="0;1" values="0.01 0.02;0.02 0.04" repeatCount="1" id="animation" begin="indefinite"></animate>
+			</filter>
+		</svg>

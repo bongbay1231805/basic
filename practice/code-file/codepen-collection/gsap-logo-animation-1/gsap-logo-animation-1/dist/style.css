@@ -1,0 +1,111 @@
+body {
+  background-color: #0D1317;
+}
+
+.logo {
+  display: flex;
+  height: auto;
+  left: 50%;
+  max-width: 37vw;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 484px;
+}
+.logo svg {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.logo-g,
+.logo-sap {
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+}
+
+.logo-g {
+  position: relative;
+}
+.logo-g:before {
+  background: #0D1317;
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateX(-85%);
+  width: 50%;
+  z-index: -1;
+}
+
+.logo-sap {
+  position: absolute;
+}
+
+.logo-g-line,
+.logo-g-end {
+  height: auto;
+  left: 14%;
+  position: absolute;
+  top: 45%;
+  width: 156.4%;
+  z-index: 3;
+}
+
+.logo-g-line {
+  overflow: hidden;
+  transform: translateX(2%);
+}
+.logo-g-line svg {
+  transform: translateX(-92%);
+}
+
+.logo-plane {
+  height: 32.9%;
+  opacity: 0;
+  position: absolute;
+  width: 25.8%;
+  z-index: 2;
+}
+
+.logo-path {
+  bottom: 51%;
+  height: 178%;
+  left: -59%;
+  position: absolute;
+  width: 147.3%;
+  z-index: 1;
+}
+.logo-path svg {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.logo-path path {
+  visibility: hidden;
+}
+.logo-path .offset-1,
+.logo-path .offset-3 {
+  transform: translateX(-0.5%) translateY(-0.5%);
+}
+.logo-path .offset-2,
+.logo-path .offset-4 {
+  transform: translateX(0.5%) translateY(0.5%);
+}
+
+.audio-toggle {
+  appearance: none;
+  background: #05F34A;
+  border: none;
+  bottom: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  left: 50%;
+  padding: 13px 20px;
+  position: fixed;
+  transform: translateX(-50%);
+}

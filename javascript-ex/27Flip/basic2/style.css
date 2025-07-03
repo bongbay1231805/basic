@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+
+.container {
+  border: 1px solid #000;
+  width: 200px;
+  height: 200px;
+  margin-left: 40%;
+  margin-top: 10%;
+  transform: rotate(-30deg);
+}

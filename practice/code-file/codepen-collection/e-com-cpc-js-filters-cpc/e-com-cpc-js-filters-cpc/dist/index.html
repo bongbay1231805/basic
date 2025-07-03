@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - e-com|cpc-js-filters #cpc</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecom Page | Product Filter</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="bg">
+      <header>
+        <h1>E-Com | JS-filters</h1>
+        <p>
+          #cpc, #cpc-js-filters, #codepenchallenge
+        </p>
+      </header>
+
+      <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search products..." oninput="filterSearch()" />
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+      <div class="filters">
+        <button class="category-button" data-category="all" onclick="filterCategory('all')">All</button>
+        <button class="category-button" data-category="electronics" onclick="filterCategory('electronics')">Electronics</button>
+        <button class="category-button" data-category="clothing" onclick="filterCategory('clothing')">Clothing</button>
+        <button class="category-button" data-category="books" onclick="filterCategory('books')">Books</button>
+
+        <label for="price-range">Max Price: $<span id="price-value">1000</span></label>
+        <input type="range" id="price-range" min="0" max="1000" value="100" oninput="filterPrice()">
+      </div>
+    </div>
+
+    <div class="products" id="product-list">
+      <!-- Products will be displayed here -->
+    </div>
+    <div class="footer">
+      <p>Made by Raj Kapadia</p>
+      <p>
+        #cpc, #cpc-js-filters, #codepenchallenge
+      </p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

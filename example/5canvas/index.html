@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{background-color: #eee;}
+    </style>
+</head>
+<body>
+    <canvas class="canvas" width="600" height="400"></canvas>
+
+    <script>
+        let canvas = document.querySelector('.canvas')
+        let context=canvas.getContext('2d')
+        //canvas 사용시 canvas.getContext('2d') 필수로 작성
+
+        context.fillRect(50,50,100,100) //기본 색상 검정색
+        
+        context.fillStyle='red'
+        context.fillRect(80,80,100,100)
+
+        
+    </script>
+</body>
+</html>

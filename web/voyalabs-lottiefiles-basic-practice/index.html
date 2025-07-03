@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body>div {
+      height: 100vh;
+    }
+
+    .two {}
+
+    #animationWindow {
+      width: 500px;
+      height: 400px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <div>
+    <div class="two">
+      <div id="animationWindow"></div>
+    </div>
+  </div>
+  <div>
+    <lottie-player src="https://lottie.host/66e1996d-3d75-48a6-8528-42043d2290d1/ei4Akj8xBj.json"
+      background="transparent" speed="1" style="width: 300px; height: 300px" direction="1" mode="normal" loop autoplay>
+    </lottie-player>
+
+    <lottie-player src="./lottie.json" background="transparent" speed="1" style="width: 300px; height: 300px"
+      direction="1" mode="normal" hover></lottie-player>
+  </div>
+
+  <div id="animationWindow2"></div>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+  <!-- //gsap + lottie -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+
+  <!-- //자체 실행, hover실행시 필요 -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger)
+
+    LottieScrollTrigger({
+      target: "#animationWindow",
+      path: "./puppy.json",
+      speed: "medium",
+      scrub: 2,
+    });
+    LottieScrollTrigger({
+      target: "#animationWindow2",
+      path: "./woman.json",
+      speed: "medium",
+      scrub: 2,
+    });
+
+    //함수는 한번만 있으면 됨.
+    function LottieScrollTrigger(vars) {
+      let playhead = {
+          frame: 0
+        },
+        target = gsap.utils.toArray(vars.target)[0],
+        speeds = {
+          slow: "+=2000",
+          medium: "+=1000",
+          fast: "+=500"
+        },
+        st = {
+          trigger: target,
+          pin: true,
+          start: "top top",
+          end: speeds[vars.speed] || "+=1000",
+          scrub: 1,
+        },
+        ctx = gsap.context && gsap.context(),
+        animation = lottie.loadAnimation({
+          container: target,
+          renderer: vars.renderer || "svg",
+          loop: false,
+          autoplay: false,
+          path: vars.path,
+          rendererSettings: vars.rendererSettings || {
+            preserveAspectRatio: "xMidYMid slice",
+          },
+        });
+      for (let p in vars) {
+        // let users override the ScrollTrigger defaults
+        st[p] = vars[p];
+      }
+      animation.addEventListener("DOMLoaded", function () {
+        let createTween = function () {
+          animation.frameTween = gsap.to(playhead, {
+            frame: animation.totalFrames - 1,
+            ease: "none",
+            onUpdate: () => animation.goToAndStop(playhead.frame, true),
+            scrollTrigger: st,
+          });
+          return () => animation.destroy && animation.destroy();
+        };
+        ctx && ctx.add ? ctx.add(createTween) : createTween();
+        // in case there are any other ScrollTriggers on the page and the loading of this Lottie asset caused layout changes
+        ScrollTrigger.sort();
+        ScrollTrigger.refresh();
+      });
+      return animation;
+    }
+  </script>
+</body>
+
+</html>

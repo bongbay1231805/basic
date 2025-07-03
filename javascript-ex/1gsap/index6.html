@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{display: flex;justify-content: center;
+        align-items: center; height: 100vh;
+        }
+        .stage{
+            background-color: burlywood;
+            width: 500px; height: 500px;
+            opacity: 0; visibility: hidden;    
+        }
+        .stage .item{
+            width: 80px; height: 90px;
+            background: url(https://i.namu.wiki/i/qWyoh8nA_DcTuY4gqcmkFC2k5Sbn8D6yVCVRQHMhJD-eRYtugUDNg6jP-v0VqbnFdCjL4jYrepNXw9ey8ouFAA.webp);
+            background-size: cover;
+            position: absolute;
+            top: 50%;
+            transform: translateX(-100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="stage">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+    let tl=gsap.timeline()
+    //autoAlpha --> opacity, visibility 
+
+    tl
+    .to(".stage",{autoAlpha:1,duration:1.5})
+    .to(".item",{
+        // keyframes:{
+        //     "0%":{x:0,y:0},
+        //     "25%":{x:20,y:0,ease: "sine.out",},
+        //     "50%":{x:250,y:-100,ease: "sine.in",},
+        //     "75%":{x:400,y:0,ease: "sine.out",},
+        //     "100%":{x:500,y:0,},
+        // },
+        keyframes:{
+            x:[0,20,250,400,500],
+            y:[0,0,-100,0,0],
+            ease: "sine.out"
+        },
+        duration:2,
+        stagger:0.2
+    })
+
+
+
+
+
+
+    </script>
+</body>
+</html>

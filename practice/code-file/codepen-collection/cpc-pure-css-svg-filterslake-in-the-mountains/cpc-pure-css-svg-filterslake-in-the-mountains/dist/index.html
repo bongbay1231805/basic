@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CPC: Pure CSS + SVG filters - lake in the mountains</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<svg>
+  <defs>
+    <!-- create mountains from ellipses-->
+    <filter id="mountains">
+      <feTurbulence type="fractalNoise" baseFrequency="0.005 0" numOctaves="7"></feTurbulence>
+      <feDisplacementMap in="SourceAlpha" scale="99"></feDisplacementMap>
+      <feColorMatrix values="0 0 0 0 0.01 0 0 0 0 0.02 0 0 0 0 0.02 0 0 0 -1 1"></feColorMatrix>
+    </filter>
+    <!-- gradient fog-->
+    <linearGradient id="gr-fog" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fff" stop-opacity="0.3"></stop>
+      <stop offset="24%" stop-color="transparent"></stop>
+    </linearGradient>
+    <!-- gradient clouds-->
+    <radialGradient id="gr-clouds">
+      <stop offset="50%" stop-color="#fff"></stop>
+      <stop offset="100%" stop-color="#fce8cf" stop-opacity="0.3"></stop>
+    </radialGradient>
+    <!-- gradient sun-->
+    <radialGradient id="gr-sun">
+      <stop offset="50%" stop-color="#ffe777"></stop>
+      <stop offset="50%" stop-color="#fff9e3" stop-opacity="0.2"></stop>
+    </radialGradient>
+    <!-- create waves-->
+    <filter id="turbulence">
+      <feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="1" result="turbulence">
+        <animate attributeName="baseFrequency" repeatCount="indefinite" values="0.1; 0.05" keyTimes="0; 1" dur="5s"></animate>
+      </feTurbulence>
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="2" in="SourceGraphic" in2="turbulence"></feDisplacementMap>
+    </filter>
+    <!-- create clouds-->
+    <filter id="clouds">
+      <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="8" seed="0"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="150"></feDisplacementMap>
+    </filter>
+  </defs>
+  <circle id="sun" cx="60%" cy="40%" r="7%" fill="url(#gr-sun)"></circle>
+  <use href="#sun" x="0" y="19%" filter="blur(4px)"></use>
+  <rect id="c1" x="75%" y="5%" width="18%" height="14%" fill="url(#gr-clouds)" opacity="0.5" filter="url(#clouds) blur(2px)"></rect>
+  <ellipse id="c2" cx="69%" cy="25%" rx="100" ry="50" fill="url(#gr-clouds)" opacity="0.7" filter="url(#clouds) blur(2px)"></ellipse>
+  <rect id="c3" x="21%" y="27%" width="11%" height="7%" fill="url(#gr-clouds)" opacity="0.7" filter="url(#clouds) blur(2px)"></rect>
+  <ellipse id="e" cx="50%" cy="0%" rx="70%" ry="42%" filter="url(#mountains)"></ellipse>
+  <use href="#c2" y="-100%" transform="scale(1 -1)" filter="url(#turbulence)"></use>
+  <use href="#c1" y="-90%" transform="scale(1 -1)" filter="url(#turbulence)"></use>
+  <use href="#c3" y="-100%" transform="scale(1 -1)" filter="url(#turbulence)"></use>
+  <use href="#e" transform="scale(1 -1)" y="-100%" filter="blur(2px) url(#turbulence)"></use>
+  <rect x="0" y="0" width="100%" height="49%" fill="#fff" opacity="0.1"></rect>
+  <use href="#e" transform="scale(1 -1)"></use>
+  <rect id="fog" x="0" y="50%" width="100%" height="100%" fill="url(#gr-fog)"></rect>
+  <use href="#fog" y="-100%" transform="scale(1 -1)"></use>
+</svg>
+<div class="resize"><span>←</span><span>resize window</span><span>→</span></div>
+<!-- partial -->
+  
+</body>
+</html>

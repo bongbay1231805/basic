@@ -1,0 +1,53 @@
+<!-- svg filter - noise filter -->
+<svg width="0" height="0">
+  <filter id="noiseFilter">
+    <feturbulence type="fractualNoise" baseFrequency="5" />
+  </filter>
+</svg>
+
+<!--  sidebar  -->
+<div class="sidebar">
+  <h1>SVG Filters </h1>
+  <nav>
+    <ul>
+      <li class="button-wrapper">
+        <a href="#" class="button">Home</a>
+      </li>
+      <li class="button-wrapper">
+        <a href="#" class="button">Info</a>
+      </li>
+      <li class="button-wrapper">
+        <a href="#" class="button">Product</a>
+      </li>
+      <li class="button-wrapper">
+        <a href="#" class="button">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<!--  svg filter - shake  -->
+<svg>
+  <defs>
+    <filter id="shake-1">
+      <feTurbulence id="turbulence" baseFrequency="0.02 1" numOctaves="3" result="noise" seed="0" />
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="2" />
+    </filter>
+    <filter id="shake-2">
+      <feTurbulence id="turbulence" baseFrequency="0.02 1" numOctaves="3" result="noise" seed="1" />
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="4" />
+    </filter>
+    <filter id="shake-3">
+      <feTurbulence id="turbulence" baseFrequency="0.02 1" numOctaves="3" result="noise" seed="3" />
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
+    </filter>
+    <filter id="shake-4">
+      <feTurbulence id="turbulence" baseFrequency="0.02 1" numOctaves="3" result="noise" seed="4" />
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="4" />
+    </filter>
+    <filter id="shake-5">
+      <feTurbulence id="turbulence" baseFrequency="0.02 1" numOctaves="3" result="noise" seed="5" />
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="2" />
+    </filter>
+  </defs>
+</svg>

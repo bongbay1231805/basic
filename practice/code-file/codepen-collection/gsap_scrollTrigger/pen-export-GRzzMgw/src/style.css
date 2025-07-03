@@ -1,0 +1,7 @@
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: clamp(16px, 4%, 80px);
+    padding-left: clamp(16px, 4%, 80px);
+}

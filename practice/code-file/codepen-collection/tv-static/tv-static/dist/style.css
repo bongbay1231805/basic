@@ -1,0 +1,56 @@
+.jersey-20-regular {
+  font-family: "Jersey 20", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.jersey-15-regular {
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  background-color: white;
+}
+
+#tv {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  font-size: min(10vh, 10vw);
+}
+#tv .screen {
+  box-sizing: border-box;
+  border-radius: 0.5em;
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  filter: grayscale(20%);
+}
+#tv .screen .message {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  padding: 1em;
+  font-family: "Jersey 20", sans-serif;
+  font-weight: 400;
+  opacity: 0.7;
+}
+#tv .screen .bg {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  filter: url(#noisy);
+}

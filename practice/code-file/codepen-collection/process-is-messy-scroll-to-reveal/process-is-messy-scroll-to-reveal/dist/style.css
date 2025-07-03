@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 250vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e6e6e6;
+}
+svg {
+  height: 55vmin;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.strands path {
+  stroke: hsl(var(--hue), 80%, calc(var(--luminosity) * 1%));
+}
+.text path {
+  stroke: #e6e6e6;
+  fill: #e6e6e6;
+  stroke-width: 2;
+}

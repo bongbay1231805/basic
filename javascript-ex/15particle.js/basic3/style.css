@@ -1,0 +1,17 @@
+*{margin: 0;padding: 0;}
+.pt{
+    position: relative;
+    height: 100vh; background-color: #000;
+}
+
+.pt video{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+}
+.pt #particles-js{
+    width: 100%; height: 100%;
+    position: relative;
+    background-color: #fff;
+    mix-blend-mode: screen;
+}

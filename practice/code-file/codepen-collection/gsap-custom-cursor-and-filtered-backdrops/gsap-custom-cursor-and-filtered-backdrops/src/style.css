@@ -1,0 +1,101 @@
+html{
+  height: 100%;
+  cursor: none !important;
+}
+	
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+	background-color: #292727;
+}
+
+h1{
+  width: auto;
+	min-width: 500px !important;
+	min-height: 14rem;
+  max-height: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
+	background-image: linear-gradient(45deg, #9CD7D7, #E5BAD8, #F0CFBC, #DCBCF0);
+	background-size: 400%;
+	font-family: armenian, sans-serif;
+	font-size: 15rem;
+  margin: 0;
+	animation: animatedGradient 16s ease-in-out infinite alternate;
+}
+
+@keyframes animatedGradient {
+	0% {
+		background-position: 0 0;
+	}
+	100% {
+		background-position: 300%;
+	}
+}
+
+#circle-cursor {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: 1px solid #71716F;
+    background: #E8E8E8;
+    position: absolute;
+    top: 50%;
+    transition: transform 0.4s ease;
+	  z-index: 1000;
+}
+  
+.grow {
+  	transform: scale(11);
+    backdrop-filter: blur(1.5px) invert(100%) saturate(300%) drop-shadow(0px 0px 20px #B9F1F4) contrast(100%) !important;
+    background: text !important;
+    border: none !important;
+}
+
+.reveal-btn-container {
+		position: absolute;
+		width: 100vw;
+		bottom: 15vh;
+		display: flex;
+		justify-content: center;
+}
+
+.reveal-btn {
+	font-family: somali, sans-serif;
+	font-size: 1rem;
+	padding: 0.6rem;
+	font-weight: 600;
+	background: transparent;
+	border: 2px solid transparent;
+	color: rgba(232, 232, 232, 0.7);
+	box-shadow:  inset 0 0 45px 0 rgba(158, 186, 204, 0.2);
+	border-radius: 5px;
+	transition: all 0.3s ease-in-out;
+	cursor: none;
+}
+
+.magnet {
+	color: #FBF9F2;
+	box-shadow:  inset 0 0 45px 0 rgba(158, 186, 204, 0.3);
+	border: 2px solid #FBF9F2;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(255, 255, 255, 0.2);
+	filter:  blur(10px) invert(100%) saturate(60%) contrast(100%) !important;
+	z-index: 10;
+}

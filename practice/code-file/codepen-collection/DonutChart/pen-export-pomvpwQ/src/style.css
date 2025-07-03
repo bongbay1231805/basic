@@ -1,0 +1,26 @@
+.donut-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.donut-text {
+  position: absolute;
+  font-size: 14px;
+  font-weight: bold;
+  color: #3498db;
+}
+
+.donut {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.donut-segment {
+  transition: stroke-dashoffset 0.3s;
+  stroke-linecap: round;  /* This makes the stroke cap rounded */
+}

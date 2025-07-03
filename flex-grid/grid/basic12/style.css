@@ -1,0 +1,29 @@
+@charset "utf-8";
+*{margin: 0;padding: 0; box-sizing: border-box;}
+
+
+.container{
+    background-color: yellow;
+    border: 2px solid #000;
+}
+.container .item{
+    background-color: green;
+    border: 2px solid #000;
+}
+
+/* place-items
+    :align-items와 justify-items를 단축 속성
+    :align-items, justify-items의 순서로 작성, 하나의 값이면 두 속성 모두에게 적용
+*/
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    place-items: start center;
+
+
+    
+    height: 80vh;
+
+}
+
+.container .item{}

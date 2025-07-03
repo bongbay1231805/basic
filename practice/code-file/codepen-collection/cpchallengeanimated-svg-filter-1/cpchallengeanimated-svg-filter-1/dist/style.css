@@ -1,0 +1,56 @@
+body {
+	height: 100vh;
+	margin: 0;
+	place-items: center;
+	background-color: aliceblue;
+}
+
+.grid-container {
+  display: grid;
+  gap: 20px 20px;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+  padding: 20px;
+}
+
+.filter-image {
+  text-align: center;
+	width: 30vw;
+	height: 80vh;
+	object-fit: cover;
+	background: white;
+	padding: 10px 10px 35px;
+	text-align: center;
+	text-decoration: none;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+	transition: all 0.15s linear;
+	z-index: 0;
+	position: relative;
+	transform: rotate(4deg);
+}
+
+.photo1, photo2 {
+	padding: 1rem;
+	filter: drop-shadow(0 2px 1px darkgrey);
+	display: inline-block;
+}
+
+.photo1 {
+	filter: url(#crumple-effect-1);
+}
+
+.photo2 {
+	filter: url(#crumple-effect-2);
+}
+
+.photo3 {
+	filter: url(#crumple-effect-3);
+}
+
+
+.photo1:hover, .photo2:hover, .photo3:hover {
+	filter: sepia(50%);
+	transform: rotate(-6deg);
+}

@@ -1,0 +1,168 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;box-sizing: border-box;}
+li{list-style: none;}
+a{text-decoration: none; color: #000;}
+
+#wrap{
+    width: 100%;
+    position: relative;
+}
+.container{
+    width: 1340px;
+    margin: 0 auto;
+}
+
+#header{
+    width: 100%;
+    display: flex;
+}
+#header .logo{
+    width: 15%;
+    height: 100px;
+    background-color: #111;
+}
+#header .nav{
+    width: 85%;
+    height: 100px;
+    background-color: #222;
+    position: relative;
+    z-index: 100;
+}
+.nav>ul{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+.nav>ul>li{
+    position: relative;
+}
+.nav>ul>li>a{
+    display: inline-block;
+    background-color: #fff;
+    padding: 15px 25px;
+    text-align: center;
+    width: 146px;
+}
+.nav>ul>li>a:hover{
+    background-color: #dbdbdb;
+}
+.nav>ul>li>ul{
+    position: absolute;
+    top: 51px;
+    left: 0;
+    display: none;
+}
+.nav>ul>li>ul>li{
+}
+.nav>ul>li>ul>li>a{
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    width: 146px;
+}
+.nav>ul>li>ul>li>a:hover{
+    background-color: rgb(219, 185, 120);
+}
+#slider::before{
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    background-color: rgb(253, 219, 156);
+    transition: 0.5s;
+}
+#slider.on::before{
+    height: 200px;
+}
+
+#slider{
+    width: 100%;
+    height: 350px;
+    background-color: #333;
+}
+#slider .sliderWrap{
+    width: 400%;
+    height: 350px;
+    display: flex;
+}
+#slider .sliderWrap .slider{
+    width: 100%;
+    height: 350px;
+}
+#slider .sliderWrap .slider.s1{
+    background: url(../img/s1.jpg) no-repeat center/cover;
+}
+#slider .sliderWrap .slider.s2{
+    background: url(../img/s2.jpg) no-repeat center/cover;
+}
+#slider .sliderWrap .slider.s3{
+    background: url(../img/s3.jpg) no-repeat center/cover;
+}
+
+
+#contents{
+    width: 100%;
+    position: relative;
+}
+#contents .link{
+    position: absolute;
+    top: -120px;
+    width: 100%;
+    height: 120px;
+    background-color: #444;
+}
+#contents .banner{
+    width: 100%;
+    height: 200px;
+    background-color: #555;
+}
+#contents .tab{
+    width: 100%;
+    height: 300px;
+    background-color: #666;
+}
+.tab .tabBtn{}
+.tab .tabBtn a{}
+
+.tab .tabCont{
+    position: relative;
+}
+
+.tab .tabCont .gallery{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.tab .tabCont .gallery img{
+    width: 100px;
+    height: 100px;
+}
+
+.tab .tabCont
+
+#footer{
+    width: 100%;
+    display: flex;
+}
+
+#footer .f_logo{
+    width: 15%;
+    height: 120px;
+    background-color: #777;
+}
+#footer .f_right{
+    width: 85%;
+}
+#footer .f_right .f_menu{
+    width: 100%;
+    height: 60px;
+    background-color: #888;
+}
+#footer .f_right .f_cp{
+    width: 100%;
+    height: 60px;
+    background-color: #999;
+}

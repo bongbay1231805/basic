@@ -1,0 +1,10 @@
+.btn { display: inline-block; padding: 0 20px; height: 40px; line-height: 40px; font-size: 14px; font-weight: 700; color: #fff; background: #000; border-radius: 20px; cursor: pointer; }
+.youtube_pop { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 11000; display: none; }
+.youtube_pop .inner { max-width: 900px; position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 20px; }
+.youtube_pop .inner .closed { position: relative; width: min(50px, 6vw); background: #fff; border-radius: 50%; text-align: center; line-height: 1; cursor: pointer; margin: 0 0 10px auto; }
+.youtube_pop .inner .video { position: relative; height: 0; padding-bottom: 56.25%; }
+.youtube_pop .inner .video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+@media (max-height: 600px) {
+  .youtube_pop .inner { max-width: 140vh; }
+}

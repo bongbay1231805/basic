@@ -1,0 +1,39 @@
+<main class="wrapper">
+  <h1 style="text-align: center;">Welcome to Pillory</h1>
+  <div class="intro-grid">
+    <div>
+      <p>Between life and death is a bridge - above it lies holy Promontory. Below it, "The Cavity".
+        The guardians of Promontory were tasked to maintain it, but have since become complacent.</p>
+
+      <p><em>You are a lost creature, trapped at the bottom of it.</em>
+</p>
+      
+      <p>On your journey, you will meet strange friends, and even stranger foes. Some are like you - lost, scrambling to understand why they exist.
+        Some are complacent, careless in their afterlife.</p>
+      <p><em>Some might want to hurt you.</em></p>
+
+      <nav>
+        <a href="#">About</a>
+        <a href="https://twitter.com/iodine_x64" target="_blank">Contact</a>
+        <a href="#" target="_blank" class="button">Play</a>
+      </nav>
+    </div>
+    <div class="intro-char">
+      <img src="https://assets.codepen.io/5896374/pillory-char.png" alt="" />
+    </div>
+  </div>
+</main>
+
+<footer>
+
+  <svg id="waterSvg" width="100%" height="100%">
+    <defs>
+      <filter id="disFilter" x="0%" y="0%">
+        <feTurbulence type="turbulence" baseFrequency="1" numOctaves="5" seed="10" result="turbulence">
+          <animate attributeName="baseFrequency" values="0.015;0.025;0.015;" dur="20s" begin="0" repeatCount="indefinite"></animate>
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="6" xChannelSelector="R" yChannelSelector="G" result="displacement"></feDisplacementMap>
+      </filter>
+    </defs>
+  </svg>
+</footer>

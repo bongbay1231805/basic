@@ -1,0 +1,15 @@
+.box {
+  background-color: skyblue;
+  color: "green";
+  color: "red";
+}
+
+.box .box-big {
+  font-size: 1.7em;
+}
+.box .box-mid {
+  font-size: 1.4em;
+}
+.box .box-sm {
+  font-size: 1.1em;
+}/*# sourceMappingURL=style.css.map */

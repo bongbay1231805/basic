@@ -1,0 +1,19 @@
+//BEM구조
+
+//B : Block - 특정 독립적인 요소 //.text-box
+//E : Element - 하위 요소들 ex) __ (언더바 두개)
+//M : Modifier - 수정자 ex) -- (하이퍼 두개)
+// - , _ ==> 띄어쓰기의 의미 btnView btn_view btn-view
+
+
+.text-box{
+    width: 300px;
+    border: 1px solid #333;
+    position: relative;
+    &>&__title{
+        color: blue;
+        &--red{
+            color: red;
+        }
+    }
+}

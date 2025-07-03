@@ -1,0 +1,33 @@
+@charset "utf-8";
+*{margin: 0;padding: 0; box-sizing: border-box;}
+
+
+.container{
+    background-color: yellow;
+    border: 2px solid #000;
+}
+.container .item{
+    background-color: green;
+    border: 2px solid #000;
+}
+
+/* grid-auto-colums, grid-auto-rows 
+
+grid-auto-rows 
+grid를 자동으로 정의
+grid-template의 통제를 벗어난 아이템들을 어떻게 배치할 것인가를 결정함.
+*/
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    grid-template-rows: repeat(2,minmax(200px,auto));
+    grid-auto-rows: minmax(100px,auto);
+    gap: 1rem;
+
+
+}
+
+.container .item{
+    font-size: 30px;
+}

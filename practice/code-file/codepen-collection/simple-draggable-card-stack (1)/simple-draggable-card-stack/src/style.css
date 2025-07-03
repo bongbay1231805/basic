@@ -1,0 +1,23 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  border: solid 2px white;
+}
+
+.card {
+  position: absolute;
+  left: calc(50% - 125px);
+  width: 250px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

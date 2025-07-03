@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .main{height: 100vh; position: relative;}
+        .imgs{position: relative; width: 520px; height: 607px; margin: 5vh auto 0;}
+        .imgs>img{position: absolute;left: 0; right: 0;top: 0;bottom: 0;}
+
+        .square{position: absolute; top: 100px; left: 200px;
+            background-color: khaki; width: 100px; height: 300px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="top" style="height: 100vh; background-color: gray;"></div>
+    <div class="main">
+        <div class="imgs">
+            <img src="./img/01.png" alt="왼팔" class="왼팔">
+            <img src="./img/02.png" alt="오른팔" class="오른팔">
+            <img src="./img/03.png" alt="오른발" class="오른발">
+            <img src="./img/04.png" alt="왼발" class="왼발">
+            <img src="./img/05.png" alt="머리" class="머리">
+            <img src="./img/06.png" alt="몸" class="몸">
+        </div>
+
+        <div class="square">사각형</div>
+    </div>
+    <div class="bottom" style="height: 100vh; background-color: gray;"></div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger)
+        // let value=document.querySelector('.square').offsetWidth 영역의 넓이
+        let value=document.querySelector('.square').offsetHeight
+        console.log(value)
+
+        let num=3
+        num+=4//num=num+4
+
+        let tl=gsap.timeline({
+            scrollTrigger:{
+                trigger:".square",
+                start:"top 60%",
+                //end:()=>`+=${document.querySelector('.square').offsetHeight}`,
+                //start지점에서 square의 높이만큼 스크롤이 이동되면 애니메이션이 끝난다
+                end:()=>`+=50%`,
+                //%의 기준이 화면이다
+                markers:true,
+                scrub:true,
+            }
+        })
+        tl.from('.몸',{duration:0.8, x:100, y:-100, opacity: 0, ease: "back.out(0.8)",})
+        tl.from('.머리',{duration:0.8, x:0, y:100, opacity: 0, ease: "back.out(0.7)",},"-=0.3")
+        tl.add('test')
+        tl.from('.왼팔',{duration:0.8, x:100, y:100, opacity: 0, ease: "back.out(0.7)",},"-=0.5")
+        tl.from('.오른팔',{duration:0.8, x:-100, y:-100, opacity: 0, ease: "back.out(0.7)",},"-=0.6")
+        tl.from('.왼발',{duration:0.8, x:0, y:-100, opacity: 0, ease: "back.out(0.7)",},"-=0.6")
+        tl.from('.오른발',{duration:0.8, x:0, y:-100, opacity: 0, ease: "back.out(0.7)",},"-=0.7")
+
+
+        
+    </script>
+</body>
+
+</html>

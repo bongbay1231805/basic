@@ -1,0 +1,61 @@
+summary {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  align-items: center;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-icon,
+.accordion-icon::after {
+  display: block;
+  box-sizing: border-box;
+  background: black;
+  border-radius: 10px;
+}
+.accordion-icon {
+  margin-top: -2px;
+  position: relative;
+  transform: scale(var(--ggs, 1));
+  width: 16px;
+  height: 2px;
+}
+.accordion-icon::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 16px;
+  top: -7px;
+  left: 7px;
+}
+
+details {
+  border-bottom: 1px solid;
+  padding: 1rem 0;
+  grid-gap: 1px;
+  max-width: 700px;
+}
+
+details[open] .accordion-icon::after {
+  display: none;
+}
+
+body {
+  font-family: termina, san-serif;
+  padding: 5vw;
+  background: #fff;
+  color: black;
+}
+
+h1 {
+  font-size: 2.3rem;
+  max-width: 600px;
+  font-weight: 600;
+}

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;
+box-sizing: border-box;}
+
+.container{border: 2px solid #000;
+background-color: yellow;
+display: flex;
+}
+
+.container .item{
+border: 2px solid #000;
+background-color: green;
+}
+
+
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item:nth-child(2){
+    /* align-items와 행동이 같음
+    align-items보다 우선권이 있음 */
+    
+    align-self: auto;
+    align-self: stretch;
+    align-self: flex-start;
+    align-self: flex-end;
+    align-self: center;
+    align-self: baseline;
+}

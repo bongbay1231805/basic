@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+  background-color: #f0f0f0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(images/noise.gif);
+  background-blend-mode: soft-light;
+  /* 칼라가 흰색이여야한다 */
+  overflow: clip;
+  border: 10px solid #161616;
+
+}
+
+h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #fff;
+  mix-blend-mode: difference;
+  /* 칼라가 흰색이여야한다 */
+  font-size: 10rem;
+  letter-spacing: 5px;
+
+}
+
+
+.slider-main{
+  position: absolute;
+  left: 0; top: 0; width: 200vw;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.slider-inner-one{
+  position: absolute;
+  left: 0; top: 10vh;
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.slider-inner-two{
+  position: absolute;
+  left: 40vh; top: 40vh;
+  width: 120%; height: 50vh;
+  display: flex;
+  justify-content: space-around;
+}
+.img{transition: all 0.3s ease-in-out;
+width: 400px;
+padding-top: 20px;
+}

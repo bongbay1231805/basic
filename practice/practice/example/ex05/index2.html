@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    canvas{background-color: #eee;}
+</style>
+<body>
+    <canvas class="canvas" width="600" height="400"></canvas>
+    <div class="imgWrap"></div>
+    <img src="" alt="">
+
+
+    <script>
+        let canvas=document.querySelector(".canvas")
+        let content=canvas.getContext('2d')
+
+        let imgWrap=document.querySelector(".imgWrap")
+
+        let imgEle=new Image()
+        imgEle.src="https://i.pinimg.com/236x/08/9b/f4/089bf4b35f68883b09460b0a664d5063.jpg"
+        imgEle.alt="배경"
+
+        context.drawImage(imgEle,0,0,200,200,0,0,100,100)
+    </script>
+</body>
+</html>

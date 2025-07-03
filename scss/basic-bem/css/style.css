@@ -1,0 +1,11 @@
+.text-box {
+  width: 300px;
+  border: 1px solid #333;
+  position: relative;
+}
+.text-box > .text-box__title {
+  color: blue;
+}
+.text-box > .text-box__title--red {
+  color: red;
+}/*# sourceMappingURL=style.css.map */

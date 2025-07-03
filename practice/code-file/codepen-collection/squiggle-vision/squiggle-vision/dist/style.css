@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Just+Another+Hand);
+img {
+  -webkit-animation: squigglevision 0.4s infinite alternate;
+          animation: squigglevision 0.4s infinite alternate;
+  max-width: 100%;
+}
+img:nth-child(2), img:nth-child(4) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+img:nth-child(3), img:nth-child(5) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+img:nth-child(4) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+@-webkit-keyframes squigglevision {
+  0% {
+    filter: url("#turbulence-1");
+  }
+  25% {
+    filter: url("#turbulence-2");
+  }
+  50% {
+    filter: url("#turbulence-3");
+  }
+  75% {
+    filter: url("#turbulence-4");
+  }
+  100% {
+    filter: url("#turbulence-5");
+  }
+}
+
+@keyframes squigglevision {
+  0% {
+    filter: url("#turbulence-1");
+  }
+  25% {
+    filter: url("#turbulence-2");
+  }
+  50% {
+    filter: url("#turbulence-3");
+  }
+  75% {
+    filter: url("#turbulence-4");
+  }
+  100% {
+    filter: url("#turbulence-5");
+  }
+}
+h1 {
+  font-weight: 400;
+  font-size: 40px;
+}
+h1 a {
+  display: block;
+  font-size: 60px;
+  text-decoration: none;
+}
+
+button, .line {
+  -webkit-animation: squigglevision 0.4s infinite alternate;
+          animation: squigglevision 0.4s infinite alternate;
+  color: white;
+  border: 2px solid white;
+  background: none;
+  font-size: 28px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  padding: 10px;
+  font-family: inherit;
+  text-transform: uppercase;
+}
+
+body {
+  background: #333;
+  font-family: "Just Another Hand", cursive;
+  padding: 20px;
+  text-align: center;
+}
+
+.avatars-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+
+.line {
+  -webkit-animation: squigglevision 0.1s infinite alternate;
+          animation: squigglevision 0.1s infinite alternate;
+}

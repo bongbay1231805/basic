@@ -1,0 +1,28 @@
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+$breakpoints-next: (
+  xs: sm,
+  sm: md,
+  md: lg,
+  lg: xl,
+  xl: xxl,
+  xxl: "",
+);
+
+@mixin mq-breakpoint-up($bp) {
+  $min-value: map-get($breakpoints, $bp);
+  @if ($bp == xs) {
+    //모든 구간
+    @content;
+  } @else {
+    @media (min-width: $min-value) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+$primary-color:skyblue;
+
+//목록형
+$box-types:('big', 'mid', 'sm');
+$bgs:('red', 'green', 'blue');
+
+.box{
+  background-color: $primary-color;
+  //목록형 중 값 하나만 가져와 쓰는 방법
+  $i:1;
+  color: nth($bgs,2);
+  color: nth($bgs,$i);
+}
+
+.box{
+  // @each 변수 in 목록형{
+  //   .box-#{변수}{
+      
+  //   }
+  // }
+
+  $i:1;
+  @each $bt in $box-types{
+    .box-#{$bt}{
+      font-size: #{2-0.3*$i}em;
+    }
+    $i:$i+1;
+  }
+}

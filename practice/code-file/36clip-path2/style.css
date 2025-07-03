@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 2em;
+    width: 18px;
+    height: 18px;
+    background: red;
+    border-radius: 100%;
+    z-index: 1000;
+  }
+
+  
+.header {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 100%;
+    z-index: 2;
+  }
+  
+  .letters {
+    flex: 1;
+    display: flex;
+    text-transform: uppercase;
+  }
+  .letters > div {
+    flex: 1;
+    font-size: 18vw;
+    font-weight: 400;
+    color: #000;
+    text-align: center;
+  }
+
+
+
+
+
+
+  
+.content-holder {
+    position: relative;
+    top: -5px;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    padding: 1em;
+  }
+  
+  .row {
+    margin: 2em 1em;
+  }
+  .img {
+    width: 200px;
+    height: 275px;
+  }
+  
+  .row:nth-child(2) .img {
+    position: relative;
+    left: 50%;
+  }
+  
+  .row:nth-child(3) .img {
+    position: relative;
+    left: 15%;
+  }
+  .row:nth-child(4) .img {
+    position: relative;
+    left: 70%;
+  }
+  .row:nth-child(6) p {
+    position: relative;
+    left: 30%;
+    margin: 4em 0;
+  }
+  
+  
+
+
+
+
+  .website-content {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .img-holder {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #666;
+    clip-path: polygon(37.5% 20%, 62.5% 20%, 62.5% 80%, 37.5% 80%);
+    transform: rotate(30deg); 
+  }
+  
+  .img-holder img {
+    object-fit: cover;
+    width: 100%;
+    position: relative;
+    transform: scale(2); 
+  }

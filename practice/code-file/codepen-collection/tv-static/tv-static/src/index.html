@@ -1,0 +1,24 @@
+<div id="tv">
+	<div class="screen">
+		<div class="bg">
+			<svg>
+				<defs>
+					<filter id="noisy" x="-10%" y="-10%" width="120%" height="200%">
+						<feTurbulence id="turbulence" type="fractalNoise" result="tur" baseFrequency="0.25" numOctaves="5" seed="2">
+							<animate attributeName="seed" from="0" to="5" dur="300ms" repeatCount="indefinite" />
+						</feTurbulence>
+						<feColorMatrix type="hueRotate" values="0">
+							<animate attributeName="values" from="0" to="360" dur="500ms" repeatCount="indefinite" />
+						</feColorMatrix>
+					</filter>
+				</defs>
+				<rect filter="url(#noisy)" width="1000" height="1000" />
+			</svg>
+		</div>
+		<section class="message">
+			<p> There is nothing wrong with your television set. </p>
+			<p> Do not attempt to adjust the picture. </p>
+
+		</section>
+	</div>
+</div>

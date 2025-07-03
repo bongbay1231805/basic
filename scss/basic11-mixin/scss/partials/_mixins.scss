@@ -1,0 +1,45 @@
+// @if(){
+
+// }@else if(){
+
+// }@else if(){}
+
+@mixin flex($isHorizontal:true,$directionalJustifyCon:"start",
+$directionalAlignIt:"start",
+$gap:0){
+    display: flex;
+
+    @if($isHorizontal ==true){
+        flex-direction: row;
+    }@else{
+        flex-direction: column;
+    }
+
+    @if($directionalJustifyCon=="start"){
+        justify-content: flex-start;
+    }@else if($directionalJustifyCon=="center"){
+        justify-content: center;
+    }@else if($directionalJustifyCon=="end"){
+        justify-content: flex-end;
+    }@else if($directionalJustifyCon=="between"){
+        justify-content: space-between;
+    }@else if($directionalJustifyCon=="around"){
+        justify-content: space-around;
+    }@else if($directionalJustifyCon=="evenly"){
+        justify-content: space-evenly;
+    }
+
+    @if($directionalAlignIt=="start"){
+        align-items: flex-start;
+    }@else if($directionalAlignIt=="center"){
+        align-items: center;
+    }@else if($directionalAlignIt=="end"){
+        align-items: flex-end;
+    }@else if($directionalAlignIt=="around"){
+        align-items: space-around;
+    }@else if($directionalAlignIt=="between"){
+        align-items: space-between;
+    }
+
+    gap:$gap
+}

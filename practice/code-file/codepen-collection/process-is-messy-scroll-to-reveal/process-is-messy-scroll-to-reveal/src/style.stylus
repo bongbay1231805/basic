@@ -1,0 +1,25 @@
+*
+  box-sizing border-box
+
+body
+  height 250vh
+  display flex
+  align-items center
+  justify-content center
+  background hsl(0, 0%, 90%)
+
+svg
+  height 55vmin
+  display none
+  position fixed
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+
+.strands path
+  stroke 'hsl(%s, 80%, %s)' % (var(--hue) calc(var(--luminosity) * 1%))
+
+.text path
+  stroke hsl(0, 0%, 90%)
+  fill hsl(0, 0%, 90%)
+  stroke-width 2

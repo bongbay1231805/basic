@@ -1,0 +1,14 @@
+.box {
+        position: absolute;
+        top: 5vw;
+        left: 5vw;
+        width: 5vw;
+        height: 5vw;
+        background-color: blue;
+    }
+
+.road {
+        position: absolute;
+        top: 25vw;
+  padding-bottom: 50vh;
+    }

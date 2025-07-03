@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero,
+.panel {
+  position: relative;
+}
+
+.content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.content h3 {
+  width: 100%;
+  text-align: center;
+  color: var(--dark);
+  margin: 75px 0;
+}

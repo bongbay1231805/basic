@@ -1,0 +1,78 @@
+body {
+  height: 1800vh;
+  background: #f12938;
+  color: white;
+}
+
+.header-section {
+  margin: 100px auto 0;
+}
+
+svg {
+  max-width: 100vw;
+  overflow: visible;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.ball {
+  fill: white;
+  visibility: hidden;
+}
+
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+}
+text {
+  /*fill: white;
+  font-size: 15px;
+  font-family: "Signika Negative", sans-serif; 
+  visibility: hidden;*/
+}
+
+#heading1 {
+  fill: white;
+  font-size: 4vw;
+  line-height: 4vw;
+  font-family: "Signika Negative", sans-serif;
+  visibility: visible;
+}
+
+#_shifthappens,
+#A_big_change_just_happened,
+#Athlete,
+#There_ll_be_winners,
+#_1995_Box,
+#_2000_Box,
+#_2010_Box,
+#_2023_Box,
+#Infinity_Box,
+#Profile_Box,
+#Cloud_Box,
+#Heart_Box,
+#Build_the_promised_land,
+#AI_s_box_of_magic_gifts,
+#The_evidence_is,
+#Thumbs_Up,
+#So_whats_the_catch_,
+#Ambitious,
+#Long_term_vision,
+#Willing_to_invest,
+#Is_this_you_,
+#Get_in_touch,
+#A_great_experience,
+#WEB_understand,
+#Experienced,
+#Start_Here {
+  visibility: hidden;
+}
+
+#stats {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: #e7e7d4fff;
+}

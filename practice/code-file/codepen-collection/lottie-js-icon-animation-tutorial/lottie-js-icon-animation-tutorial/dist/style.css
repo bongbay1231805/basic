@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: #e7e7e7;
+}
+
+.container {
+  display: flex;
+}
+
+.bm {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+}

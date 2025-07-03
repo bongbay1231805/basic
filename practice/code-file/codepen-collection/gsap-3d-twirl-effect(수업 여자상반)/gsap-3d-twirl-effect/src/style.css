@@ -1,0 +1,86 @@
+:root {
+    --gap:5px;
+}
+html {
+    box-sizing: border-box;
+}
+body {
+    background:#223;
+    font-family: 'Inter', sans-serif;
+}
+.container {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    perspective: 700px;   
+    height: 100vh;
+    color: #aaa;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+.effect {
+    min-height: 800px;
+}
+.container span {
+    font-size: 40px;
+    color: white;
+}
+.card {
+    position: relative;
+    display: flex;
+    width: 400px;
+    height: 600px;
+    transform-style: preserve-3d;
+}
+.pic {
+    background-image: url(https://source.unsplash.com/HD8KlyWRYYM/400x600);
+    background-size: cover;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    transform-origin: center center;
+}
+
+.pic:nth-of-type(1) {
+    clip-path: polygon(0 0, 100% 0, 100% 10%, 0 10%);
+    top:calc(var(--gap) * 1 );
+}
+.pic:nth-of-type(2) {
+    clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%);
+    top:calc(var(--gap) * 2 );
+}
+.pic:nth-of-type(3) {
+    clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+    top:calc(var(--gap) * 3 );
+}
+.pic:nth-of-type(4) {
+    clip-path: polygon(0 30%, 100% 30%, 100% 40%, 0 40%);
+    top:calc(var(--gap) * 4 );
+}
+.pic:nth-of-type(5) {
+    clip-path: polygon(0 40%, 100% 40%, 100% 50%, 0 50%);
+    top:calc(var(--gap) * 5 );
+}
+.pic:nth-of-type(6) {
+    clip-path: polygon(0 50%, 100% 50%, 100% 60%, 0 60%);
+    top:calc(var(--gap) * 6 );
+}
+.pic:nth-of-type(7) {
+    clip-path: polygon(0 60%, 100% 60%, 100% 70%, 0 70%);
+    top:calc(var(--gap) * 7 );
+}
+.pic:nth-of-type(8) {
+    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    top:calc(var(--gap) * 8 );
+}
+.pic:nth-of-type(9) {
+    clip-path: polygon(0 80%, 100% 80%, 100% 90%, 0 90%);
+    top:calc(var(--gap) * 9 );
+}
+.pic:nth-of-type(10) {
+    clip-path: polygon(0 90%, 100% 90%, 100% 100%, 0 100%);
+    top:calc(var(--gap) * 10 );
+}

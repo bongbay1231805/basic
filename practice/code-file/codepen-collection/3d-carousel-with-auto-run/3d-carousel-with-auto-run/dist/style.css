@@ -1,0 +1,84 @@
+:root {
+  --color-primary: dimgray;
+  --rotation-speed: 1s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+body {
+  background: linear-gradient(to top, #222, #ddd);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+  perspective-origin: 50%;
+}
+.image-cube {
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  position: relative;
+  transition: var(--rotation-speed);  
+}
+.image-cube div {
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  background-size: cover;
+  background-position: 50% 50%;
+  border: 3px solid white;
+  -webkit-box-reflect: below -3px linear-gradient(to bottom, rgba(0,0,0,0) 80%, rgba(0,0,0,0.15));
+}
+
+.front {
+  background-image: url('https://tmna.aemassets.toyota.com/is/image/toyota/toyota/vehicles/2024/grandhighlanderhybrid/mlp/highlight-gallery/GHM_MY24_0035_V001_h2P7l9vpMTKr49WbXseL3uth.png?fmt=jpeg&fit=crop&qlt=90&wid=1024');
+  transform: translateZ(150px);
+}
+.right {
+  background-image: url('https://tmna.aemassets.toyota.com/is/image/toyota/toyota/vehicles/2024/grandhighlanderhybrid/mlp/highlight-gallery/GHM_MY24_0029_V001_lSkeffbHLxmLRNAdUvggeKFsiIM3FfA.png?fmt=jpeg&fit=crop&qlt=90&wid=1024');
+  transform: rotateY(-270deg) translateX(150px);
+  transform-origin: 100% 0;
+}
+.back {
+  background-image: url('https://tmna.aemassets.toyota.com/is/image/toyota/toyota/vehicles/2024/grandhighlanderhybrid/mlp/highlight-gallery/GHM_MY24_0037_V001_k9ibSYzKIY4CekURRId.png?fmt=jpeg&fit=crop&qlt=90&wid=1024');
+  transform: translateZ(-150px) rotateY(180deg);
+}
+.left {
+  background-image: url('https://tmna.aemassets.toyota.com/is/image/toyota/toyota/vehicles/2024/grandhighlanderhybrid/mlp/highlight-gallery/GHM_MY24_0028_V001_bkN5WLbyPx78CHFB4.png?fmt=jpeg&fit=crop&qlt=90&wid=1024');
+  transform: rotateY(270deg) translateX(-150px);
+  transform-origin: 0 50%;
+}
+.btns {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 405px;
+  pointer-events: none;
+}
+.btns button {
+  background-color: transparent;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  background: var(--color-primary);
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  box-shadow: 0 3px 5px rgba(0,0,0,.5);
+  pointer-events: all;
+}

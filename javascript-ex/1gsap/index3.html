@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="하나">하나</div>
+        <div class="둘">둘</div>
+        <div class="셋">셋</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        // gsap.from('.하나',{x:500,opacity:0,durantion:1})
+        // gsap.from('.둘',{x:500,opacity:0,durantion:1,delay:1})
+        // gsap.from('.셋',{x:500,opacity:0,durantion:1,delay:2})
+
+        // gsap.from('.하나',{x:500,opacity:0,durantion:1})
+        // gsap.from('.둘',{x:500,opacity:0,durantion:1},'+=1')
+        // gsap.from('.셋',{x:500,opacity:0,durantion:1},'+=2')
+
+        //'+=1' : 1초 뒤에
+        //'-=1' : 1초 앞으로
+        //'<' : 만일 '셋'에게 준다면 바로 앞 트윈은 '둘' //바로 앞 트윈과 같은 시간에 재생
+
+    let tl = gsap.timeline();
+        tl.to(".하나", {x: 500, duration: 1});
+        tl.to(".둘", {x: 500, duration: 1},'-=0.5');
+        tl.to(".셋", {x: 500, duration: 1},'<');
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+@charset "utf-8";
+*{margin: 0;padding: 0; box-sizing: border-box;}
+
+
+.container{
+    background-color: yellow;
+    border: 2px solid #000;
+}
+.container .item{
+    background-color: green;
+    border: 2px solid #000;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* 최소 100px보다 줄어들지는 않고 자식이 넘치면 알아서 늘어나 자식의 높이값을 가짐(자주 사용) */
+    grid-template-rows: repeat(3,minmax(100px, auto));
+
+
+}
+
+.container .item{
+    font-size: 30px;
+}

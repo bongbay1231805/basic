@@ -1,0 +1,19 @@
+<div class="paper">
+</div>
+
+<svg>
+	<defs>
+		<filter id="crumple-effect">
+			<feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="10" result="turbulence" />
+				<animate attributeName="baseFrequency" values="115;159" keyTimes="0;1" dur="1.5s" repeatCount="indefinite"/>
+			</feTurbulence>
+			<feDisplacementMap in2="turbulence" in="SourceGraphic" scale="20">
+				<animate attributeName="scale" values="1555;75;1555" keyTimes="0;0.5;1" dur="0.5s" repeatCount="indefinite"/>
+			</feDisplacementMap>
+			<feGaussianBlur in="sourceGraphic" stdDeviation="1"/>
+			<feMorphology operator="erode" radius="15">
+				<animate attributeName="radius" values="15;0;15" keyTimes="0;0.5;1" dur="0.5s" repeatCount="indefinite"/>
+			</feMorphology>
+		</filter>
+	</defs>
+</svg>

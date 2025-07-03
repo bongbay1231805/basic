@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrap">
+        <section>
+            <img src="img/bg.jpg" alt="bg" id="bg">
+            <img src="img/moon.png" alt="moon" id="moon">
+            <img src="img/mountain.png" alt="mountain" id="mountain">
+            <img src="img/road.png" alt="road" id="road">
+            <h2 class="text" id="text">Moon Night</h2>
+        </section>
+        <section>
+            <h3>Parallax Background Scrolling</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, ab exercitationem, eum obcaecati quis a ut maiores officia quos tempore eius possimus, eaque error. Sed hic omnis id ad dolores laborum quibusdam est enim vero officiis delectus exercitationem repudiandae sunt amet provident eum maxime eaque nisi, eveniet asperiores tempora ab?</p>
+        </section>
+    </div>
+
+
+
+    <script>
+        let bg=document.querySelector("#bg")
+        let moon=document.querySelector("#moon")
+        let mountain=document.querySelector("#mountain")
+        let road=document.querySelector("#road")
+        let text=document.querySelector("#text")
+
+        //scroll은 widow의 이벤트이다.
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY
+            console.log(value)
+            // transform: translate(20px,20px);
+            moon.style.transform=`translate(-${value*0.2}px,${value*0.35}px)`
+            bg.style.transform=`translate(0px,${value*0.5}px)`
+            mountain.style.transform=`translate(0px,-${value*0.15}px)`
+            road.style.transform=`translate(0px,${value*0.15}px)`
+            text.style.transform=`translate(0px,${value}px)`
+        })
+    </script>
+</body>
+</html>

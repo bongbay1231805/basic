@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Little book of Jhey w/ ScrollTrigger (Scroll &amp;&amp; Click pages!)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="book">
+  <div class="book">
+    <div class="book__spine"></div>
+    <div class="page page0 book__page book__cover book__cover--front" style="--page-index: 1;">
+      <div class="page__half page__half--front"></div>
+      <div class="page__half page__half--back">
+        <div class="book__insert"></div>
+      </div>
+    </div>
+    <div class="page page1 book__page" style="--page-index: 2;">
+      <div class="page__half page__half--front">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Fireflies-sketch.svg"/>
+        <div class="page__number">1</div>
+      </div>
+      <div class="page__half page__half--back">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Gun-sketch.svg"/>
+        <div class="page__number">2</div>
+      </div>
+    </div>
+    <div class="page page2 book__page" style="--page-index: 3;">
+      <div class="page__half page__half--front">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Birthday-sketch.svg"/>
+        <div class="page__number">3</div>
+      </div>
+      <div class="page__half page__half--back">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Record-sketch.svg"/>
+        <div class="page__number">4</div>
+      </div>
+    </div>
+    <div class="page page3 book__page" style="--page-index: 4;">
+      <div class="page__half page__half--front">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Train-sketch.svg"/>
+        <div class="page__number">5</div>
+      </div>
+      <div class="page__half page__half--back">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Pancake-sketch.svg"/>
+        <div class="page__number">6</div>
+      </div>
+    </div>
+    <div class="page page4 book__page" style="--page-index: 5;">
+      <div class="page__half page__half--front">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Pokedex-sketch.svg"/>
+        <div class="page__number">7</div>
+      </div>
+      <div class="page__half page__half--back">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Launch-sketch.svg"/>
+        <div class="page__number">8</div>
+      </div>
+    </div>
+    <div class="page page5 book__page" style="--page-index: 6;">
+      <div class="page__half page__half--front">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Matryoshka-sketch.svg"/>
+        <div class="page__number">9</div>
+      </div>
+      <div class="page__half page__half--back">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Moon-sketch.svg"/>
+        <div class="page__number">10</div>
+      </div>
+    </div>
+    <div class="page page6 book__page" style="--page-index: 7;">
+      <div class="page__half page__half--front">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Impossible-sketch.svg"/>
+        <div class="page__number">11</div>
+      </div>
+      <div class="page__half page__half--back">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Elon-sketch.svg"/>
+        <div class="page__number">12</div>
+      </div>
+    </div>
+    <div class="page page7 book__page" style="--page-index: 8;">
+      <div class="page__half page__half--front">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Care-sketch.svg"/>
+        <div class="page__number">13</div>
+      </div>
+      <div class="page__half page__half--back">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Cloud-sketch.svg"/>
+        <div class="page__number">14</div>
+      </div>
+    </div>
+    <div class="page page8 book__page" style="--page-index: 9;">
+      <div class="page__half page__half--front">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Tcannon-sketch.svg"/>
+        <div class="page__number">15</div>
+      </div>
+      <div class="page__half page__half--back">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Truck-sketch.svg"/>
+        <div class="page__number">16</div>
+      </div>
+    </div>
+    <div class="page page9 book__page" style="--page-index: 10;">
+      <div class="page__half page__half--front">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Newton-sketch.svg"/>
+        <div class="page__number">17</div>
+      </div>
+      <div class="page__half page__half--back">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Kitkat-sketch.svg"/>
+        <div class="page__number">18</div>
+      </div>
+    </div>
+    <div class="page page10 book__page" style="--page-index: 11;">
+      <div class="page__half page__half--front">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Earth-sketch.svg"/>
+        <div class="page__number">19</div>
+      </div>
+      <div class="page__half page__half--back">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/605876/Cubes-sketch.svg"/>
+        <div class="page__number">20</div>
+      </div>
+    </div>
+    <div class="page page11 book__page book__cover book__cover--back" style="--page-index: 12;">
+      <div class="page__half page__half--front"></div>
+      <div class="page__half page__half--back"></div>
+      <div class="book__insert">
+        <img class="logo" src="https://assets.codepen.io/605876/bear-with-cap.svg"/>
+      </div>
+    </div>
+  </div>
+</div>
+<section id="section2"></section>
+<!-- partial -->
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+<script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

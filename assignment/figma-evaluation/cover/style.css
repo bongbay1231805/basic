@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.responsive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+.responsive iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.responsive img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.responsive .mobile {
+    position: relative;
+    width: 411px;
+    height: 836px;
+    padding: 100px 27px 100px 28px;
+}
+
+.responsive .tablet {
+    position: relative;
+    width: 859px; height: 1280px;
+    padding: 125px 10px 10px 31px;
+}

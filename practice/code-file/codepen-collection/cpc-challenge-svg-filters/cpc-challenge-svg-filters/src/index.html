@@ -1,0 +1,85 @@
+<svg id="defs">
+	<defs>
+		<!-- 	Using two filters because mask use a diferent base unit (?)	 -->
+		<filter id="filter">
+			<feTurbulence type="turbulence" numOctaves="4" baseFrequency="0.02" result="turbulence" />
+			<feDisplacementMap in2="turbulence" in="SourceGraphic" xChannelSelector="R" yChannelSelector="G" scale="50" />
+			<feOffset dx="-0.025" dy="-0.05" />
+		</filter>
+		<filter id="maskFilter" filterUnits="objectBoundingBox">
+			<feTurbulence type="turbulence" numOctaves="4" baseFrequency="20" result="turbulence" />
+			<feDisplacementMap in2="turbulence" in="SourceGraphic" xChannelSelector="R" yChannelSelector="G" scale="0.2" />
+			<feOffset dx="-0.025" dy="-0.05" />
+		</filter>
+	</defs>
+</svg>
+
+<main>
+	<section style="--idx: 0">
+		<div class="img-wrapper">
+			<img src="https://images.unsplash.com/photo-1606267911397-c636c86907c4?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTU3MTkzMTJ8&ixlib=rb-4.0.3&q=85" alt="A man with a white hoodie, iluminated by a blacklight looking at the camera, he has colored spots across his face and a green and yellow smugde below his left eye">
+			<svg>
+				<defs>
+					<mask id="mask1" maskContentUnits="objectBoundingBox">
+						<ellipse cx="0.5" cy="0.5" rx="0.4" ry="0.4" fill="white" filter="url(#maskFilter)" />
+					</mask>
+				</defs>
+			</svg>
+		</div>
+		<article>
+			<h2>Art</h2>
+
+			<p>Art is a boundless expression of human creativity, a language that transcends barriers and speaks to the soul. From the intricate brushstrokes of a masterpiece painting to the graceful movements of a ballet dancer, art takes on countless forms, each telling a unique story. It has the power to evoke emotions, provoke thoughts, and transport us to different worlds. Whether it's a vibrant street mural, a haunting melody, or a thought-provoking sculpture, art has the ability to connect us to our humanity and inspire us to see the world through a new lens.</p>
+
+			<p>Artists are the visionaries who breathe life into their creations, channeling their innermost thoughts and feelings into tangible works of beauty. They pour their hearts and souls into their art, leaving a piece of themselves behind for the world to discover. Through their art, they challenge conventions, question norms, and push boundaries, inviting us to question, reflect, and engage with the world around us. Art is a mirror that reflects the complexities of the human experience, capturing moments of joy, sorrow, love, and longing with unparalleled depth and nuance.</p>
+
+			<p>As we immerse ourselves in the world of art, we embark on a journey of self-discovery and enlightenment. We learn to appreciate the beauty in imperfection, the power of vulnerability, and the richness of diversity. Art invites us to embrace our individuality, celebrate our differences, and find common ground in our shared humanity. It is a testament to the resilience of the human spirit, a beacon of hope in times of darkness, and a celebration of the infinite possibilities of the human imagination.</p>
+		</article>
+	</section>
+
+	<section style="--idx: 2">
+		<div class="img-wrapper">
+			<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTU4MDU3MDF8&ixlib=rb-4.0.3&q=85" alt="A blonde girl, with long hair, using a multicolor sunlight glasses, holding a daisy flower in her mouth. She is wearing a red shirt, and a black jacket">
+			<svg>
+				<defs>
+					<ellipse id="ellipsis2" cx="0.5" cy="0.5" rx="0.4" ry="0.4" fill="white" />
+					<mask id="mask2" maskContentUnits="objectBoundingBox">
+						<ellipse cx="0.5" cy="0.5" rx="0.4" ry="0.4" fill="white" filter="url(#maskFilter)" />
+					</mask>
+				</defs>
+			</svg>
+		</div>
+		<article>
+			<h2>Photography</h2>
+			<p>Photography is a magical art form that freezes moments in time, capturing the beauty and essence of the world around us. Through the lens of a camera, photographers become storytellers, weaving narratives with light, shadow, and composition. Each photograph is a window into a specific moment, a glimpse of a reality that may otherwise go unnoticed. From breathtaking landscapes to intimate portraits, photography has the power to evoke emotions, trigger memories, and inspire contemplation.</p>
+
+			<p>Photographers are like visual poets, using their cameras to translate their unique perspectives into images that speak volumes without uttering a single word. They play with light and color, framing their subjects in ways that draw the viewer's eye and evoke a sense of wonder. Whether capturing the raw beauty of nature, the hustle and bustle of city life, or the quiet moments of everyday existence, photographers have the ability to transport us to different worlds and evoke a myriad of emotions.</p>
+
+			<p>In a world saturated with images, photography stands out as a medium that can both inform and transform. It serves as a powerful tool for documenting history, raising awareness about social issues, and celebrating the diversity of the human experience. Through photography, we gain new perspectives, challenge our assumptions, and connect with people and places beyond our immediate surroundings. It is a testament to the power of visual storytelling, a universal language that transcends barriers and speaks to the heart.</p>
+
+		</article>
+	</section>
+
+	<section style="--idx: 3">
+		<div class="img-wrapper">
+			<img src="https://images.unsplash.com/photo-1600181957663-d8b921a1f516?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MTU4MDU3MDF8&ixlib=rb-4.0.3&q=85" alt="A blonde girl in the bushes with a vase on her head">
+			<svg>
+				<defs>
+					<mask id="mask3" maskContentUnits="objectBoundingBox">
+						<ellipse cx="0.5" cy="0.5" rx="0.4" ry="0.4" fill="white" filter="url(#maskFilter)" />
+					</mask>
+				</defs>
+			</svg>
+		</div>
+		<article>
+			<h2>Programming</h2>
+
+			<p>Programming is a fascinating blend of logic, creativity, and problem-solving that empowers us to create software solutions to a wide array of challenges. It is a language of its own, with syntax and rules that govern how we communicate with computers to perform specific tasks. From simple scripts to complex algorithms, programming allows us to automate processes, analyze data, and build innovative applications that shape the digital world we live in.</p>
+
+			<p>Programmers are like modern-day wizards, wielding languages like Python, Java, C++, and more to bring their ideas to life in the form of code. They meticulously craft instructions that tell computers what to do, breaking down complex problems into manageable steps and algorithms. Through programming, we can develop websites, mobile apps, artificial intelligence systems, and much more, pushing the boundaries of what technology can achieve.</p>
+
+			<p>In a rapidly evolving technological landscape, programming skills have become increasingly valuable, opening up a world of opportunities in fields such as software development, data science, cybersecurity, and beyond. Learning to code not only equips us with the tools to build innovative solutions but also fosters critical thinking, problem-solving, and a mindset of continuous learning and adaptation. As we delve into the world of programming, we embark on a journey of exploration and discovery, unlocking the potential to shape the future through lines of code.</p>
+
+		</article>
+	</section>
+</main>

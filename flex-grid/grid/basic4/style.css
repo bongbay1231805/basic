@@ -1,0 +1,34 @@
+@charset "utf-8";
+*{margin: 0;padding: 0; box-sizing: border-box;}
+
+
+.container{
+    background-color: yellow;
+    border: 2px solid #000;
+}
+.container .item{
+    background-color: green;
+    border: 2px solid #000;
+}
+
+/* auto-fill, auto-fit 
+    - 자동 채우기
+    colum의 개수를 정하지 않고 설정된 너비가 허용하는 한 최대한 셀을 채움
+*/
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,minmax(20%, auto));
+    grid-template-columns: repeat(auto-fill,minmax(20%, auto));
+    grid-template-columns: repeat(auto-fill,minmax(200px, auto));
+    /* 빈공간을 채우고자 하면 200px기준으로 갯수가 채워지나
+    빈공간을 채우기 위해서는 auto-fit을 사용해야 한다.*/
+    grid-template-columns: repeat(auto-fit,minmax(200px, auto));
+    /* 갯수가 많을 때는 auto-fill, auto-fit 차이가 없음 */
+
+
+}
+
+.container .item{
+    font-size: 30px;
+}

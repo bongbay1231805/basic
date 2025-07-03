@@ -1,0 +1,7 @@
+.cls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-around;
+  gap: 20px;
+}/*# sourceMappingURL=style.css.map */

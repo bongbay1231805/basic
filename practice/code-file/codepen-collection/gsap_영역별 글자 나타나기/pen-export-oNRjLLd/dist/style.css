@@ -1,0 +1,10 @@
+section{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10vw 0;
+  border-bottom:1px solid;
+  font-family:arial;
+  font-size: 1.375rem;
+  font-size: clamp(1.375rem, 1.25rem + 0.625vw, 2rem);
+}

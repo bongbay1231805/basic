@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Count to 100%</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="bg"></div>
+
+<svg viewBox="0 0 40 12">
+  <mask id="m" fill="#fff">
+    <text id="num" x="20" y="11" text-anchor="middle"></text>
+  </mask>
+  <g mask="url(#m)">
+    <use href="#num" fill="#000"/>
+    <rect id="fill" width="100%" height="100%" fill="#fff"/>
+    <use href="#num" fill-opacity="0" stroke="#000" stroke-width="0.75"/>
+  </g>
+</svg>
+<!-- partial -->
+  <script src='https://unpkg.com/gsap@3/dist/gsap.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

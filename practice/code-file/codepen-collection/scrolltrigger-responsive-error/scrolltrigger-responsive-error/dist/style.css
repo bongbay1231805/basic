@@ -1,0 +1,22 @@
+.blank { height: 1000px; }
+.section { margin: 600px auto; }
+.historyList .wrap {display: flex;justify-content: space-between;}
+.historyList .year{font-size:12.500rem;font-weight: 700;font-family: var(--pointfont),sans-serif;font-style: italic;}
+.historyList .leftBox{width: 30%;text-align:right;}
+.historyList .rightBox{width:70%}
+.historyList .yearBox+.yearBox{margin-top:200px;}
+.historyList .yearBox .box {position: relative;z-index: -1;}
+.historyList .yearBox .box img{margin-top:-150px;}
+.historyList .yearBox .box img.inner{margin-top:0;}
+.historyList .yearBox .history_list{padding:0 1.875rem;}
+.historyList .yearBox .history_list li{font-size: 1.125rem;display: flex;}
+.historyList .yearBox .history_list li span{display: block;}
+.historyList .yearBox .history_list li+li{margin-top:10px;}
+.historyList .yearBox .history_list .date{font-family: var(--pointfont),sans-serif;width:15%;font-weight: 600;}
+.historyList .yearBox .history_list .detail{width:85%;padding-left: 1.875rem;}
+
+@media (max-width: 1200px) {
+  .section { margin: 100px auto; }
+  .historyList .year { font-size: 8rem; }
+  .historyList .yearBox .history_list li { font-size: 1rem; }
+}

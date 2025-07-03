@@ -1,0 +1,16 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;}
+
+#wrap>div{
+    margin-top: 20px;
+    border-bottom: 3px solid #222;
+    padding: 0 5vw 20px;
+}
+
+input{outline: none;}
+
+.second form{
+    padding: 10px;
+    border: 1px solid #222;
+}
+.second fieldset{padding: 10px;}

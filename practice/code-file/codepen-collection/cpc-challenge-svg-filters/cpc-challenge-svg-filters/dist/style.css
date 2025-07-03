@@ -1,0 +1,83 @@
+body {
+	margin: 0;
+}
+
+main {
+	position: relative;
+	background: #000;
+	gap: 0 2rem;
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, min(auto, 100vh));
+	font-family: Merriweather, serif;
+}
+
+section {
+	display: contents;
+
+	.img-wrapper {
+		position: sticky;
+		top: 0;
+		grid-column: 1 / 2;
+		grid-row: 1;
+		height: 100vh;
+		
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+		
+		svg {
+			width: 100%;
+			height: 100%;
+			transform-origin: center;
+		}
+	}
+	
+	article {
+		grid-column: 2;
+		width: 40ch;
+		margin-inline: auto;
+		line-height: 1.6;
+		color: #f4f4f4;
+	}
+}
+
+section:nth-child(1) .img-wrapper {
+	mask: url(#mask1);
+}
+
+section:nth-child(2) .img-wrapper {
+	mask: url(#mask2);
+}
+
+section:nth-child(3) .img-wrapper {
+	mask: url(#mask3);
+}
+
+@supports (animation-timeline: scroll()) {
+	svg mask ellipse {
+		animation: scaleOut both;
+		animation-timeline: scroll();
+		animation-range: cover calc(25% * var(--idx) - 25%) contain calc(40% * var(--idx));
+	}
+}
+
+#defs {
+	position: absolute;
+	inset: 0 100% 0 -100%;
+}
+
+@keyframes scaleOut {
+	from {
+		ry: 0;
+		rx: 0;
+	}
+	to {
+		ry: 2;
+		rx: 2;
+	}
+}

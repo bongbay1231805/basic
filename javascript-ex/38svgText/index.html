@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CodePen - SVG text on path JS animation</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <div class="svg">
+    <svg viewBox="0 0 1800 600" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <path id="Vector_1"
+          d="M52 137C49 193.167 72.3 303 189.5 293C336 280.5 287 83 438 125.5C589 168 543 329 750.5 280.5C958 232 892 6.5 1045 59C1198 111.5 1171 362.5 1363 331.5C1555 300.5 1499.5 77 1633 73C1766.5 69 1691 249 1746.5 303C1790.9 346.2 1855 350.333 1881.5 347"
+          stroke="black" />
+        <path id="Vector_2"
+          d="M218 506.5C239.5 505 367 569 540.5 496.5C714 424 756.5 342 1006.5 400C1256.5 458 1360.5 553 1516.5 476.5C1672.5 400 1615.5 465.5 1887 515"
+          stroke="black" />
+      </defs>
+      <text>
+        <textPath href="#Vector_1" id="textOnPath1" class="text-on-path">My Portfoliio My Portfoliio My Portfoliio My Portfoliio My Portfoliio </textPath>
+        <textPath href="#Vector_2" id="textOnPath2" class="text-on-path">Home Home Home Home Home Home Home Home Home Home Home Home</textPath>
+      </text>
+    </svg>
+  </div>
+
+  <!-- partial -->
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="./main.js"></script>
+</body>
+
+</html>
+
+
+<!-- <svg width="1800" height="600" viewBox="0 0 1800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g id="Frame 1" clip-path="url(#clip0_1_2)">
+    <rect width="1800" height="600" fill="white" />
+    <path id="Vector 1"
+      d="M52 137C49 193.167 72.3 303 189.5 293C336 280.5 287 83 438 125.5C589 168 543 329 750.5 280.5C958 232 892 6.5 1045 59C1198 111.5 1171 362.5 1363 331.5C1555 300.5 1499.5 77 1633 73C1766.5 69 1691 249 1746.5 303C1790.9 346.2 1855 350.333 1881.5 347"
+      stroke="black" />
+    <path id="Vector 2"
+      d="M218 506.5C239.5 505 367 569 540.5 496.5C714 424 756.5 342 1006.5 400C1256.5 458 1360.5 553 1516.5 476.5C1672.5 400 1615.5 465.5 1887 515"
+      stroke="black" />
+  </g>
+  <defs>
+    <clipPath id="clip0_1_2">
+      <rect width="1800" height="600" fill="white" />
+    </clipPath>
+  </defs>
+</svg> -->

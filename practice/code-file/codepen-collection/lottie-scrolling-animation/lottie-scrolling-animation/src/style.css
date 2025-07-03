@@ -1,0 +1,40 @@
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 200px;
+}
+
+h1 {
+  align: left;
+  width: 70%;
+  margin: auto;
+}
+
+#d2 {
+   width: 70%;
+  margin: 0 auto;
+ 
+  }
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+ 
+}
+
+#d2 {
+  align: flex;
+}
+
+#d1, #d3 {
+  width: 70%;
+  margin: auto;
+  min-height:500px;
+  background-color: lightblue;
+}
+
+
+</style>

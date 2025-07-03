@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Simple e-commerse pruduct page</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav id="nav">
+	<h4>Select By:</h4>
+	<label for="brand">Brand:</label>
+	<select name="brand" id="brand">
+		<option value="all">All</option>
+	</select>
+	<label for="category">Category:</label>
+	<select name="category" id="category">
+		<option value="all">All</option>
+	</select>
+	<h4>Order By: </h4>
+	<label for="Order">Order</label>
+	<select name="order" id="order">
+		<option value="all">Default</option>
+		<option value="low-price">Low Price</option>
+		<option value="high-price">High Price</option>
+		<option value="low-rating">Low Rating</option>
+		<option value="high-rating">High Rating</option>
+	</select>
+
+</nav>
+<section id="users" class="flex-center">
+	<div class="flex-center">
+		<h1>Using Fetch and working with JSON</h1>
+	</div>
+	<div id="users-section">
+	</div>
+
+</section>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

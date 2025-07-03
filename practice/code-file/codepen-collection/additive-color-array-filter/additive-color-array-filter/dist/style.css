@@ -1,0 +1,131 @@
+:root {
+  --main-bg: #1d1e22;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  min-height: 100vh;
+  font-family: "Encode Sans Expanded", sans-serif;
+  color: #ffffff;
+  background-color: var(--main-bg);
+}
+
+.toggles {
+  position: fixed;
+  inset-block-start: 50%;
+  inset-inline-end: 1rem;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.toggles__label {
+  cursor: pointer;
+}
+
+.toggles__text {
+  position: relative;
+  display: block;
+  padding-inline-start: 2.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.toggles__text::before,
+.toggles__text::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 0;
+  transform: translateY(-50%);
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
+.toggles__text::before {
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+.toggles__text::after {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256' xml:space='preserve'%3E%3Cg style='stroke:none;stroke-width:0;stroke-dasharray:none;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;fill:none;fill-rule:nonzero;opacity:1'%3E%3Cpath d='M42.526 90c-.17-.787-.492-1.637-.763-2.635-.135-.478-.242-1.029-.353-1.463l-.343-1.256c-.242-.833-.426-1.676-.712-2.492l-.816-2.451c-1.199-3.224-2.591-6.349-4.24-9.333-3.351-5.947-7.514-11.367-12.138-16.467a485.752 485.752 0 0 0-7.097-7.617c-2.413-2.544-4.865-5.11-7.126-7.992-.572-.705-1.098-1.49-1.647-2.232-.516-.797-1.037-1.571-1.491-2.432a19.88 19.88 0 0 1-2.153-5.601c-.441-2.054-.254-4.31.356-6.311.572-2.067 1.784-3.708 2.949-5.255l.036-.048c.03-.04.066-.08.1-.113 1.704-1.636 3.596-3.112 5.693-4.286a18.774 18.774 0 0 1 6.845-2.3c2.426-.237 4.91.06 7.131.948 2.229.871 4.203 2.208 5.919 3.749 3.44 3.108 5.996 6.928 8.178 10.873 2.164 3.965 1.737 2.66 3.34 6.864.076-4.691.212-3.624 1.289-8.289 1.096-4.648 2.796-9.273 5.597-13.418a26.8 26.8 0 0 1 5.077-5.64c1.982-1.654 4.3-3.019 6.86-3.836 2.545-.838 5.304-1.154 7.978-.859 2.678.271 5.26 1.067 7.598 2.218l.042.021c.125.062.251.142.358.224 1.837 1.426 3.722 2.947 5.086 5.13l.532.785c.152.281.285.577.426.867.259.59.585 1.157.768 1.776l.514 1.874c.142.628.161 1.264.236 1.898a19.667 19.667 0 0 1-.865 7.162c-.631 2.238-1.559 4.249-2.511 6.221-2.008 3.863-4.35 7.369-6.783 10.748-2.417 3.39-4.981 6.614-7.488 9.849-5.03 6.458-10.094 12.803-14.62 19.51a175.578 175.578 0 0 0-3.317 5.08c-1.037 1.732-2.077 3.469-3.04 5.248-.509.878-.953 1.785-1.404 2.692-.452.907-.93 1.805-1.325 2.738l-.626 1.389c-.21.46-.411.908-.645 1.496-.465 1.128-1.052 2.096-1.405 2.966z' style='stroke:none;stroke-width:1;stroke-dasharray:none;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;fill:%23e00000;fill-rule:nonzero;opacity:1' transform='matrix(2.81 0 0 2.81 1.407 1.407)'/%3E%3C/g%3E%3C/svg%3E%0A")
+    center / auto 70% no-repeat;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.toggles__input:checked + .toggles__text::after {
+  opacity: 1;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  aspect-ratio: 1 / 1;
+  list-style: none;
+}
+
+.images__item {
+  filter: grayscale(100%);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+
+  img {
+    object-position: center;
+    object-fit: cover;
+    filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.active {
+    filter: none;
+
+    img {
+      filter: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+  .images {
+    height: min(360px, 100vh - 30px);
+    gap: .5rem;
+  }
+}

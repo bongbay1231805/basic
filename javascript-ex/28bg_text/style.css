@@ -1,0 +1,55 @@
+:root {
+    --background-rgb: 2 6 23;
+    --background-light-rgb: 30 41 59;
+    
+    --border-rgb: 255 255 255;
+    --border: 1px solid rgb(var(--border-rgb) / 20%);
+    
+    --hyperplexed-main-rgb: 41 121 255;
+    --hyperplexed-main-light-rgb: 56 182 255;
+    --hyperplexed-secondary-rgb: 42 252 152;
+      
+    --card-size: 480px;
+    --font-size: 0.8rem;
+    --logo-size: calc(var(--card-size) * 0.3);
+  }
+  
+  body {
+    background: rgb(var(--background-rgb));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    font-family: 'Noto Sans', sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .card-track {
+    height: 100%;
+    width: var(--card-size);
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .card-wrapper {
+    width: 100%;
+    position: relative;
+  }
+  
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1; /* 가로세로 1:1 */
+    position: relative;
+    margin: 1rem;
+    border-radius: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  

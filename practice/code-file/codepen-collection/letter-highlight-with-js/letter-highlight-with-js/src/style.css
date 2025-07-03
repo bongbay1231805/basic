@@ -1,0 +1,27 @@
+body {
+	background-color: #1c1b22;
+}
+.button-container {
+	display: flex;
+	justify-content: space-around;
+	padding: 5px;
+	flex-wrap: wrap;
+}
+
+.button-container button {
+	background-color: transparent;
+	color: white;
+	border: 1px solid white;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.button-container button:hover {
+	background-color: #ffffff23;
+}
+
+.container {
+	word-break: break-all;
+	font-weight: 700;
+}

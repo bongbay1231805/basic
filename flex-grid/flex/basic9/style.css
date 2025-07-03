@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;
+box-sizing: border-box;}
+
+.container{border: 2px solid #000;
+background-color: yellow;
+display: flex;
+}
+
+.container .item{
+border: 2px solid #000;
+background-color: green;
+}
+
+
+.container{
+    display: flex;
+    
+
+}
+
+.item:nth-child(1){order: 3;}
+.item:nth-child(2){order: 1;
+    /* flex, grid 에서는 position없이도 z-index가 실행됨 */
+    z-index: 20;
+}
+.item:nth-child(3){order: 2;
+transform: scale(1.5);}
+    

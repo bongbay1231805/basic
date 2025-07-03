@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2rem 1.5rem;
+  color: #030303;
+  background-color: #fafafa;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+@media screen and (max-width: 912px) {
+  body {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+@media screen and (max-width: 475px) {
+  body {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.header .button {
+  position: relative;
+  line-height: 1.5;
+  transition: all 200ms ease;
+  font-family: inherit;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 660px) {
+  .header .button:hover {
+    letter-spacing: 2px;
+  }
+}
+.header .button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border: 1px solid rgba(3, 3, 3, 0);
+  bottom: 0;
+  left: 0;
+  transition: all 250ms ease-in-out;
+}
+.header .button:hover:after {
+  border-color: #030303;
+  width: 100%;
+}
+.header .button-group {
+  margin: 2.5rem 0;
+  display: flex;
+  gap: 1rem;
+}
+@media screen and (max-width: 912px) {
+  .header .button-group {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 660px) {
+  .header .button-group {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.grid-container {
+  max-width: 55rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 1.5rem 1rem;
+  margin: 0 auto;
+}
+@media screen and (max-width: 912px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 660px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 475px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+.grid-item {
+  filter: grayscale(100%) blur(3px);
+  padding: 0.5rem 0.5rem;
+  border-radius: 4px;
+  transition: all 300ms ease;
+}
+.grid-item img {
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  object-position: center;
+}
+
+.selected {
+  filter: none;
+  background-color: #fff;
+}
+.selected:hover {
+  filter: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transform: scale(1.1);
+  background-color: #fff;
+}

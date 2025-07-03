@@ -1,0 +1,64 @@
+*{margin: 0;padding: 0;}
+
+body{background-color: #ddd;}
+.main{position: relative; height: 100vh;}
+.cube{position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+perspective: 1500px;
+}
+.box-area{
+    /* 회전하는 주체 */
+    position: relative;
+    transform-style: preserve-3d;
+    width: 400px;height: 400px;
+    transition: 0.5s;
+    transform: rotateX(0deg) rotateY(0deg);
+
+}
+.box-area .box{position: absolute;
+    width: 400px; height: 400px;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-area .box h2{font-size: 25px; color: #fff;}
+
+.box-area .box-front{
+    background-color: rgba(228, 39, 39, 0.5);
+    transform: translateZ(200px);
+}
+.box-area .box-right{
+    background-color: rgba(245, 135, 18, 0.5);
+    transform: rotateY(90deg) translateZ(200px);
+}
+.box-area .box-back{
+    background-color: rgba(255, 196, 0, 0.5);
+    transform: rotateY(180deg) translateZ(200px);
+}
+.box-area .box-left{
+    background-color: rgba(72, 255, 5, 0.5);
+    transform: rotateY(-90deg) translateZ(200px);
+}
+.box-area .box-top{
+    background-color: rgba(4, 67, 255, 0.5);
+    transform: rotateX(90deg) translateZ(200px);
+}
+.box-area .box-bottom{
+    background-color: rgba(131, 16, 253, 0.5);
+    transform: rotateX(-90deg) translateZ(200px);
+    
+}
+
+.button{width: 1px; height: 1px;
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button>div{position: absolute;}
+.button .rotate-x-button{left: -300px;}
+
+.button .rotate-y-button{bottom: -300px;
+display: flex; gap: 100px; left: 50%;
+transform: translateX(-50%);}
+
+.button .front{bottom: -300px; cursor: pointer;}

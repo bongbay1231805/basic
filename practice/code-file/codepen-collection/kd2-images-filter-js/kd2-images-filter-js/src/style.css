@@ -1,0 +1,51 @@
+body,
+html {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	flex-wrap: wrap;
+}
+.buttonsHere {
+	display: flex;
+	gap: 5px;
+	flex-wrap: wrap;
+}
+.screenTidy {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+img {
+	max-width: 25vw;
+	max-height: 100vh;
+}
+button,
+a {
+	padding: 7px 15px;
+	cursor: pointer;
+	background: #111;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #eee;
+	font-family: system-ui;
+}
+a:hover,
+button:hover {
+	background: #252525;
+}
+a:active,
+button:active {
+	background: #111;
+}

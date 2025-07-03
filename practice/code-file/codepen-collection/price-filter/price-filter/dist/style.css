@@ -1,0 +1,145 @@
+$red: #b11224;
+$yellow: #ffdd00;
+$blue: #2f9fd7;
+$green: #31ac55;
+$orange: #f26f22;
+$brown: #603a34;
+$chocolate: #592512;
+$letter-color: #efefefcc;
+$letter-color-alt: #fefefe9a;
+$candy-shadow: #ffffff88;
+$button-shadow: #6d4c41;
+
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+  background-color: #111;
+  padding: 2em;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: $red;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  padding-bottom: 2em;
+}
+
+.filters input,
+.filters select,
+.filters button {
+  padding: 10px;
+  border-radius: 2em;
+  background-color: $chocolate;
+  color: $letter-color;
+  border: 3px solid white;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.filters button {
+  font-family: "Bevan", serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  &:hover {
+    color: $letter-color-alt;
+    border-radius: 1em;
+    cursor: pointer;
+  }
+}
+
+#productList {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1em;
+}
+
+.product {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.product:hover {
+  transform: scale(1.05);
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin: 0.5em 0;
+  color: $blue;
+}
+
+.product p {
+  margin: 0.2em 0;
+  color: $green;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Squiggle Vision</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<button>Get New Ones</button>
+
+<div class="avatars-grid">
+  <img src="https://avatars.dicebear.com/api/adventurer/1.svg" alt="" />
+  <img src="https://avatars.dicebear.com/api/avataaars/1.svg" alt="" />
+  <img src="https://avatars.dicebear.com/api/human/1.svg" alt="" />
+  <img src="https://avatars.dicebear.com/api/big-smile/1.svg" alt="" />
+  <img src="https://avatars.dicebear.com/api/bottts/1.svg" alt="" />
+  <img src="https://avatars.dicebear.com/api/micah/1.svg" alt="" />
+</div>
+
+<svg>
+
+  <filter id="turbulence-1">
+    <feTurbulence type="fractalNoise" baseFrequency="0.001" numOctaves="2" data-filterId="3" />
+    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="25" />
+  </filter>
+
+  <filter id="turbulence-2">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" data-filterId="3" />
+    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="25" />
+  </filter>
+
+  <filter id="turbulence-3">
+    <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" data-filterId="3" />
+    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="25" />
+  </filter>
+
+  <filter id="turbulence-4">
+    <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" data-filterId="3" />
+    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="25" />
+  </filter>
+
+  <filter id="turbulence-5">
+    <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" data-filterId="3" />
+    <feDisplacementMap xChannelSelector="R" yChannelSelector="G" in="SourceGraphic" scale="25" />
+  </filter>
+
+</svg>
+
+
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="warp-filter-0" color-interpolation-filters="sRGB" x="-50%" y="-50%" width="200%" height="200%">
+      <title>Warp</title>
+      <feComponentTransfer>
+        <feFuncR type="table" tableValues="1 0.5"></feFuncR>
+      </feComponentTransfer>
+      <feMerge result="a">
+        <feMergeNode></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+      <feTurbulence type="fractalNoise" baseFrequency="0.019" numOctaves="1" result="warp"></feTurbulence>
+      <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="62" in="a" in2="warp"></feDisplacementMap>
+    </filter>
+  </defs>
+  <path class="line" style="fill: transparent; stroke: rgb(0, 0, 0); filter: none;" d="M 151.679 95.324 C 151.679 95.324 208.034 74.94 227.218 79.137 C 246.402 83.334 287.17 76.139 296.163 91.727 C 305.156 107.315 324.94 132.494 323.741 156.475 C 322.542 180.456 333.333 192.446 320.144 214.628 C 306.955 236.81 306.355 259.592 268.585 263.789 C 230.815 267.986 195.444 278.177 172.662 258.993 C 149.88 239.809 129.496 191.247 130.695 172.062 C 131.894 152.877 124.7 137.89 134.293 125.899 C 143.886 113.908 153.477 94.724 151.679 95.324 Z"></path>
+</svg>
+<!-- partial -->
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

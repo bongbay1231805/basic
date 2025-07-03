@@ -1,0 +1,32 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.appVideos {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 500px;
+  height: 80vh;
+  border-radius: 10px;
+  border: 2px solid green;
+}
+
+.appVideos::-webkit-scrollbar {
+  //display: none;
+}
+
+video,
+.videoPlayer {
+  height: 80vh;
+}
+
+.videoPlayer:not(.last) {
+  border-bottom: 2px solid green;
+}

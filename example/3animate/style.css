@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+*{margin: 0;padding: 0;}
+body{background-color: lightgray;
+padding-bottom: 200vh;}
+.box1{
+    position: relative;
+    width: 300px; height: 50px;
+    background-color: #fff;
+    text-align: center;
+    margin: 100px auto 30px;
+}
+.box1 .child{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: aqua;
+    color: #ffffff;
+    font-size: 22px;
+    border-radius: 20px;
+    line-height: 30px;
+
+    /* transition-property: transform; //무엇을
+    transition-duration: 0.5s; //동안
+    transition-timing-function: cubic-bezier(1, 0.07, 0.17, 1.17);
+    transition-delay: 1s; */
+
+    /* 축약했을때 시간은 뒤바뀌면 안됨.  0.5s는 duration, 1s는 delay */
+    transition: transform 0.5s 1s cubic-bezier(1, 0.07, 0.17, 1.17);
+    transition: transform 0.5s 0.5s ease,
+                background-color 0.8s ease,
+                color 0.5s  1s ease;
+}
+
+.box1:hover .child{
+    transform: translateY(-50px);
+    background-color: blue;
+    color: yellow;
+}
+
+.box2{
+    overflow: hidden;
+    width: 400px; font-size: 30px;
+    color: #222; background-color: #4f86bd;
+    text-align: center; margin: 0 auto;
+    margin-bottom: 50px;
+}
+.box2>div{transform: translateX(-100%);
+transition: 0.5s;
+transition-timing-function: cubic-bezier(0.25, 1.35, 0.62, 1.35);
+}
+.box2:hover>div{
+    transform: translateX(0%);
+}
+
+.box2>div.one{transition: 0.3s;}
+.box2>div.two{transition: 0.6s;}
+.box2>div.three{transition: 0.9s;}
+
+.box3{
+    position: relative;
+    width: 100px;height: 100px;
+    background-color: rgb(31, 254, 191);
+    text-align: center; font-size: 30px;
+    line-height: 100px;
+
+    animation-name:box-ani; /* keyframes의 이름과 연결한다. */
+    /* 애니메이션의 지속시간 */
+    animation-duration: 2s;
+    /* 애니메이션의 반복횟수 : 3, infinite(무한반복) */
+    animation-iteration-count: 5;
+    /* 애니메이션의 방향 
+    normal 기본값
+    alternate 정 -> 역 -> 정
+    alternate-reverse 역 -> 정 -> 역
+    reverse : 위치의 시작이 끝지점 역방향
+    */
+    animation-direction: alternate;
+    animation-direction: alternate-reverse;
+    animation-direction: reverse;
+    animation-direction: normal;
+
+    /* 애니메이션의 지연시간 */
+    animation-delay: 1s; /* 1초후에 애니메이션이 시작됨 */
+    /* 애니메이션의 가속도 */
+    animation-timing-function: cubic-bezier(0.61, -0.04, 0.42, 2.13);
+    /* 애니메이션이 시작전과 끝난 후 처리방법
+    forwards 애니메이션이 끝난 상테에서 멈춤 
+    backwards 애니메이션이 시작되는 지점을 keyframes의 0% 상태에서 시작하게 함
+    both --> forwards + backwards
+    */
+    animation-fill-mode: both;
+
+    /* animation: name duration timing-function delay iteration-count direction fill mode */
+    /* animation: box-ani 2s ease 0.5s infinite normal both; */
+
+}
+
+@keyframes box-ani{
+    from{/* 전체시간에서 시작지점 0% */
+        left: 100px;
+    }
+    to{/* 전체시간에서 끝지점 100% */
+        left: 500px;
+    }
+}
+
+.box4{
+    width: 100px; height: 100px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    font-size: 30px; line-height: 100px;
+    transform: translate(100px, 100px);
+    animation: box-ani2 4s linear 1s infinite both;
+}
+
+@keyframes box-ani2{
+    0%{transform: translate(0,0);}
+    25%{transform: translate(200px, 0);}
+    50%{transform: translate(200px, 200px);}
+    75%{transform: translate(0, 200px);}
+    100%{transform: translate(0,0);}
+}
+
+.box5{display: flex; gap: 2%; margin-top: 300px;
+/* 카메라 위치 얼마나 떨어져서 보고 있는가? */
+perspective: 600px;
+}
+.box5>div{width: 49%; height: 300px;
+background-color: #ffdcdc;
+position: relative;}
+.box5 .c1{
+    transform-style: preserve-3d;
+}
+.box5 .c1 .ro{
+    font-size: 40px;
+    position: absolute;
+    left: 50%; top: 30%;
+    background-color: #4f86bd;
+    color: #fff;
+    padding: 20px 30px;
+    transform: translateZ(200px) rotateY(45deg) ; /* degree(각도) */
+}
+.box5 .c2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+    perspective: 600px;
+}
+.box5 .c2 .top{transform-style: preserve-3d;}
+.box5 .c2 .top div{
+    transform-style: preserve-3d;
+    transform: translateY(100%) rotateX(-90deg);
+    opacity: 0;
+    transition: 0.8s 0.8s cubic-bezier(0.55, -0.72, 0.54, 2);
+}
+.box5 .c2:hover .top div{
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+}

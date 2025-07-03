@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Work Sans";
+  color: #0f0f0f;
+}
+
+p,
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  margin: 0 auto;
+  height: 500vh;
+}
+.main > div {
+  height: 100vh;
+  position: relative;
+}
+.sec2 {
+  position: relative;
+}
+
+.svg-container {
+  position: absolute;
+  top: -24vh;
+  right: 0;
+  left: 0;
+}
+
+.sec2,.sec3{background-color: #83FFC3;}
+.sec4,.sec5{background-color: #83A5FF;}

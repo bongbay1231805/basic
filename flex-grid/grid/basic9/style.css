@@ -1,0 +1,37 @@
+@charset "utf-8";
+@charset "utf-8";
+*{margin: 0;padding: 0; box-sizing: border-box;}
+
+.container{
+    background-color: yellow;
+    border: 2px solid #000;
+}
+.container .item{
+    background-color: green;
+    border: 2px solid #000;
+}
+
+/* grid-auto-flow 
+자동 배치 알고리즘
+아이템이 자동 배치되는 흐름을 결정하는 속성이다.
+*/
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%,auto));
+    grid-template-rows: repeat(5,minmax(50px,auto));
+    grid-auto-flow: dense; /* dense(밀접한) 빈 곳을 아래 아이템이 채워준다. */
+    grid-auto-flow: column;
+    grid-auto-flow: row;
+}
+
+.container .item:nth-child(2){
+    grid-column: auto /span 3; /* auto 어디 배치 될지 모르지만 세 칸을 잡겠다 */
+}
+
+.container .item:nth-child(5){
+    grid-column: auto /span 3;
+}
+
+.container .item:nth-child(7){
+    grid-column: auto /span 2;
+}

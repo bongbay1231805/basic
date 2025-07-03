@@ -1,0 +1,93 @@
+*{margin: 0;padding: 0;}
+
+:root{
+    --index:calc(1vw + 1vh);
+    --transition:cubic-bezier(0.15, 0.88, 0.23, 1.04);
+
+}
+
+body{background-color: #141414;}
+
+.wrap{
+    display: flex; 
+    align-items: center;justify-content: center;
+    height: 100vh;
+}
+
+.items{display: flex; gap: 0.4rem;
+    perspective: calc(var(--index) * 35);
+}
+.item{
+    width: calc(var(--index)*3);
+    height: calc(var(--index)*12);
+    background-size: cover;
+    transform-style: preserve-3d;
+    background-color: #222;
+    background-position: center;
+    cursor: pointer;
+    filter: grayscale(1) brightness(0.5);
+    transition: transfrom 1.25s var(--transition), filter 3s var(--transition), width 1.25s var(--transition);
+}
+.item::before,
+.item::after{
+    content: "";
+    position: absolute;
+    width: 20px; height: 100%;
+    right: calc(var(--index) * -1);
+}
+.item::after{
+    left: calc(var(--index) * -1);
+}
+
+/* hover의 오른쪽 */
+.item:hover{
+    transform: translateZ(calc(var(--index) * 10));
+    filter: grayscale(0) brightness(1);
+}
+.item:hover + *{ /* //바로 밑 동생 */
+    transform: translateZ(calc(var(--index) * 8.5)) rotateY(35deg);
+    filter: grayscale(0) brightness(1);
+    z-index: -1;
+}
+.item:hover + * + *{
+    transform: translateZ(calc(var(--index) * 5.6)) rotateY(40deg);
+    filter: grayscale(0) brightness(1);
+    z-index: -2;
+}
+.item:hover + * + * + *{
+    transform: translateZ(calc(var(--index) * 2.5)) rotateY(30deg);
+    filter: grayscale(0) brightness(1);
+    z-index: -3;
+}
+.item:hover + * + * + * + *{
+    transform: translateZ(calc(var(--index) * 0.6)) rotateY(15deg);
+    filter: grayscale(0) brightness(1);
+    z-index: -4;
+}
+
+/* hover의 왼쪽 */
+.item:has(+ :hover){
+    transform: translateZ(calc(var(--index) * 8.5)) rotateY(-35deg);
+    filter: grayscale(0) brightness(1);
+}
+.item:has(+ * + :hover){
+    transform: translateZ(calc(var(--index) * 5.6)) rotateY(-40deg);
+    filter: grayscale(0) brightness(1);
+}
+.item:has(+ * + * + :hover){
+    transform: translateZ(calc(var(--index) * 2.5)) rotateY(-30deg);
+    filter: grayscale(0) brightness(1);
+}
+.item:has(+ * + * + * + :hover){
+    transform: translateZ(calc(var(--index) * 0.6)) rotateY(-15deg);
+    filter: grayscale(0) brightness(1);
+}
+
+/* :active --> 활성 상태인 요소 마우스를 올리고 있는 동안을 의미 */
+.item:active, .item:focus{
+    width: 28vw;
+    filter: grayscale(0) brightness(1);
+    z-index: 100;
+    transform: translateZ(calc(var(--index) * 10));
+    margin: 0 0.45vw;
+}

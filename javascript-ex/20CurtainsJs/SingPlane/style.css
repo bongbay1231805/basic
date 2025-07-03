@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background: #2e3440;
+    overflow: hidden;
+  }
+  /* canvas */
+  #canvas {
+    width: 100vw;
+    height: 100vh;
+  }
+  .container {
+    position: relative;
+  }
+  h1 {
+    position: absolute;
+    top: 60%;
+    z-index: 999;
+    color: #fff;
+    left: 28%;
+    font-size: 7vw;
+    font-family: "Monument Extended";
+    -webkit-text-stroke: 2px #000;
+    mix-blend-mode: hard-light;
+  }
+  .curtain {
+    position: absolute;
+    top: 22%;
+    left: 35%;
+    width: 500px;
+    height: 700px;
+  }
+  .curtain img {
+    display: none;
+  }

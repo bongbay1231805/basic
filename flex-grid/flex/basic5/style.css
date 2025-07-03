@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;
+box-sizing: border-box;}
+
+.container{border: 2px solid #000;
+background-color: yellow;
+}
+
+.container .item{
+border: 2px solid #000;
+background-color: green;
+}
+
+
+.container{
+    display: flex;
+
+    /* justify-content와 수직방향의 정렬*/
+    align-items: stretch;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    align-items: baseline;
+
+
+
+    height: 50vh;
+}
+.item{}

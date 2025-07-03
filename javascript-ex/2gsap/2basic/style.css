@@ -1,0 +1,37 @@
+
+
+*{margin: 0;padding: 0;}
+
+li{list-style: none;}
+
+
+section{
+    height: 100vh;
+    display: flex; justify-content: center; align-items: center;
+}
+
+
+.sec01 .title{
+    font-size: 120px; text-transform: uppercase;
+    line-height: 1.1;
+}
+.sec01 .title span{
+    display: block;
+}
+
+.sec02{position: relative; overflow: hidden;}
+.sec02 .circle{
+    position: absolute; width: 2500px; height: 2500px;
+    border-radius: 50%; background-color: #000;
+    top: 40%; left: 50%; transform: translateX(-50%);
+}
+.sec02 .textBox{
+    position: absolute;
+    top: 50%; left: 50%; transform: translateX(-50%);
+    color: #fff; text-align: center;
+    text-transform: uppercase;
+    font-size: 60px; font-weight: bold;
+}
+
+.sec03{background-color: #000; color: #fff;}
+.sec03 h2{}

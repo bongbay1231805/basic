@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.squiggle {
+  position: absolute;
+  top: 588px;
+  left: 75px;
+}
+
+.section-1 {
+  height: 658px;
+}
+.section-2 {
+  height: 900px;
+}
+.section-3 {
+  height: 638px;
+}
+.section-4 {
+  height: 658px;
+}
+.section-5 {
+  height: 800px;
+}
+.section-6 {
+  height: 755px;
+}
+.section-7 {
+  height: 801px;
+}
+.section-8 {
+  height: 757px;
+}
+.section-9 {
+  height: 757px;
+}
+.section-10 {
+  height: 695px;
+}
+.section-11 {
+  height: 757px;
+}
+.section-12 {
+  height: 852px;
+}
+.section-13 {
+  height: 757px;
+}
+.section-14 {
+  height: 420px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+.section:nth-child(even) {
+  background-color: gray;
+}
+.section:nth-child(odd) {
+  background-color: white;
+}

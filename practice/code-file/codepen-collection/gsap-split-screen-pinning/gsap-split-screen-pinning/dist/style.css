@@ -1,0 +1,43 @@
+body {
+  background-color: #1E1E21;
+  color: #FFFFFF;
+}
+
+.spacer {
+  height: 100vh;
+  font-size: 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.splitScreenPinning {
+  /* sections */
+  /* content (in left section) */
+  /* images (in right section) */
+}
+.splitScreenPinning__left, .splitScreenPinning__right {
+  width: 50%;
+}
+.splitScreenPinning__right {
+  height: 100vh;
+}
+.splitScreenPinning__content {
+  margin: auto;
+  width: 80%;
+}
+.splitScreenPinning__content-section {
+  min-height: 100vh;
+}
+.splitScreenPinning__images {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.splitScreenPinning__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

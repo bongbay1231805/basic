@@ -1,0 +1,75 @@
+<div class="wrapper">
+	<div class="container">
+		<div class="effect-1 effect"></div>
+		<h1 class="text-1 text">ūnus</h1>
+	</div>
+
+	<div class="container">
+		<div class="effect-2 effect"></div>
+		<h1 class="text-2 text">duo</h1>
+	</div>
+
+	<div class="container">
+		<div class="effect-3 effect"></div>
+		<h1 class="text-3 text">trēs</h1>
+	</div>
+
+	<div class="container">
+		<div class="effect-4 effect"></div>
+		<h1 class="text-4 text">quattuor</h1>
+	</div>
+</div>
+<svg width="0" height="0">
+	<filter id="svg-effect-1">
+		<feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="5" seed="3">
+			<animate attributeName="baseFrequency" dur="100s" values="0.02;0.05;0.02" repeatCount="indefinite" />
+		</feTurbulence>
+		<feDisplacementMap in="SourceGraphic" scale="60">
+			<animate attributeName="scale" values="60;20;60" dur="100s" repeatCount="indefinite" />
+		</feDisplacementMap>
+		<feColorMatrix type="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 18 -7" />
+	</filter>
+	<filter id="svg-effect-2">
+		<feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="5" seed="3">
+			<animate attributeName="baseFrequency" dur="100s" values="0.01;0.07;0.01" repeatCount="indefinite" />
+		</feTurbulence>
+		<feDisplacementMap in="SourceGraphic" scale="60">
+			<animate attributeName="scale" values="40;20;40" dur="100s" repeatCount="indefinite" />
+		</feDisplacementMap>
+		<feColorMatrix type="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 18 -7" />
+	</filter>
+	<filter id="svg-effect-3">
+		<feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="5" seed="3">
+			<animate attributeName="baseFrequency" dur="100s" values="0.03;0.07;0.03" repeatCount="indefinite" />
+		</feTurbulence>
+		<feDisplacementMap in="SourceGraphic" scale="60">
+			<animate attributeName="scale" values="60;20;60" dur="100s" repeatCount="indefinite" />
+		</feDisplacementMap>
+		<feColorMatrix type="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 18 -7" />
+	</filter>
+	<filter id="svg-effect-4">
+		<feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="5" seed="3">
+			<animate attributeName="baseFrequency" dur="100s" values="0.02;0.04;0.02" repeatCount="indefinite" />
+		</feTurbulence>
+		<feDisplacementMap in="SourceGraphic" scale="60">
+			<animate attributeName="scale" values="60;50;60" dur="100s" repeatCount="indefinite" />
+		</feDisplacementMap>
+		<feColorMatrix type="matrix" values="
+                1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 14 -7" />
+	</filter>
+</svg>

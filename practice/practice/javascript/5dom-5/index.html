@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <label for="user_name">이름:</label>
+        <input type="text" id="user_name">
+        <br>
+        <label for="user_home">수강생 홈</label>
+        <input type="text" id="user_home">
+        <br>
+        <input type="button" value="사용자 추가" id="btn">
+        <br>
+        <div class="memberList"></div>
+    </form>
+
+
+
+
+    <script>
+        document.querySelector("#btn").addEventListener('click',function(){
+            let user_name=document.querySelector("#user_name")
+            let user_home=document.querySelector("#user_home")
+
+            let aTagNode=document.createElement("a")
+            aTagNode.href=user_home.value
+            aTagNode.target="_blank"
+
+            let txtNode=document.createTextNode(user_home.value)
+            aTagNode.appendChild(txtNode)
+
+            document.querySelector(".memberList").appendChild(aTagNode)
+
+            let br=document.createElement('br')
+            document.querySelector('.memberList').appendChild(br)
+            
+            user_name.value=""
+            user_home.value=""
+        })
+
+
+
+    </script>
+</body>
+</html>

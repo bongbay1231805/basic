@@ -1,0 +1,20 @@
+.go_btn { 
+	padding: 16px 32px; border-radius: 24px; display: block; outline: none; text-decoration: none; font-size: 18px; font-weight: 500; color: #3d9ded; box-shadow: inset 0 0 0 2px #3d9ded; transition: box-shadow .5s ease, color 1s ease;
+  div { display: flex; overflow: hidden; text-shadow: 0 20px 0 #f2b633;
+    span { display: block; backface-visibility: hidden; font-style: normal; transition: transform .25s ease; transform: translateY(0) translateZ(0);
+      $i: 1;
+		  @while $i < 5 {
+			  &:nth-child(#{$i}) {
+			    transition-delay: $i / 20 + s;
+		  	}
+		  	$i: $i + 1;
+	  	}
+  	}
+	}
+  &:hover {
+    box-shadow: inset 0 0 0 2px #f2b633; color: #f2b633;
+	    span { transform: translateY(-18px); }
+  }
+}
+
+body { min-height: 100vh; display: flex; justify-content: center; align-items: center; background: #E4ECFA; font-family: 'NanumSquare', sans-serif; }

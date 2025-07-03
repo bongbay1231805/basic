@@ -1,0 +1,6 @@
+@use "./partials/mixins"; //똑같은 변수가 있을 때 에러를 바로 잡아줌
+
+
+.cls{
+    @include mixins.flex(false,"between","around",20px)
+}

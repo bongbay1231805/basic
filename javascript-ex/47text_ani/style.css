@@ -1,0 +1,27 @@
+*{margin: 0; padding: 0;}
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@800&family=Staatliches&display=swap');
+.page1 {
+   height: 100vh;
+   background:#12171b;
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   flex-direction:column;
+   overflow:hidden;
+}
+
+.rotatingHeader h1{
+   font-family: 'Saira Extra Condensed', sans-serif;
+   color:#444;
+   font-size:100px;
+   margin:0;
+   padding:0;
+   line-height:0.5;
+   perspective:600px;
+
+}
+.rotatingHeader h1:nth-child(2){
+    color: #efefef;
+}
+.rotatingHeader h1 span{display: inline-block;}

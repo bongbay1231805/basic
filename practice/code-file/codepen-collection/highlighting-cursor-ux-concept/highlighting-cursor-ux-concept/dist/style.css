@@ -1,0 +1,81 @@
+html {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  line-height: 1.5rem;
+  font-size: 1.3em;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --cursor-height: 0px;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  line-height: 1;
+  background-color: papayawhip;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+*::selection {
+  background: rgba(255, 255, 0, 0.6);
+  background-blend-mode: overlay;
+}
+
+.content {
+  max-width: 500px;
+  text-align: center;
+}
+
+.highlightable {
+  --show-cursor: none;
+  cursor: none;
+}
+.highlightable:hover {
+  --show-cursor: block;
+}
+.highlightable::after {
+  --cursor-width: max( 5px, calc( var(--cursor-height) * .4) );
+  display: var(--show-cursor);
+  content: "";
+  pointer-events: none;
+  background: transparent;
+  border: 2px solid rgba(0, 0, 0, 0.75);
+  border-radius: calc( var(--cursor-width) / 2 );
+  translate: -50% -50%;
+  position: absolute;
+  top: var(--mouse-y, 0);
+  left: var(--mouse-x, 0);
+  width: var(--cursor-width);
+  height: var(--cursor-height);
+  cursor: none;
+  transition: height 0.3s cubic-bezier(0.095, 1.09, 0.605, 1.235), width 0.3s cubic-bezier(0.095, 1.09, 0.605, 1.235);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+h1, h2, h3, h4, p {
+  margin-block: 60px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 5rem;
+}
+
+h4 {
+  font-size: 15vw;
+}

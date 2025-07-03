@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Raleway&display=swap");
+:root {
+  --bg-color: #0C134F;
+  --text-color: #FFFFFF;
+  --purpleDark: #0C134F;
+  --purpleMedium: #1D267D;
+  --purpleLight: #5C469C;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  display: block;
+  height: auto;
+  min-height: 100%;
+  width: 100%;
+  font-size: clamp(16px, 2vw, 24px);
+  line-height: 1.8;
+  overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  background-image: var(--bg-color);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: block;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+.section {
+  position: relative;
+  display: flex;
+  min-height: calc(100vh + 5vw);
+  padding-top: 5vw;
+  margin-top: -5vw;
+  overflow: hidden;
+  align-items: center;
+  border-radius: 5vw 5vw 0 0;
+}
+.section-img {
+  position: relative;
+  height: calc(100vh + 5vw);
+  margin-top: -5vw;
+  width: 100%;
+}
+.section-img > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inner {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  padding: 8vw 3vw 5vw;
+}
+
+.bg-purpleDark {
+  background-color: var(--purpleDark);
+}
+.bg-purpleMedium {
+  background-color: var(--purpleMedium);
+}
+.bg-purpleLight {
+  background-color: var(--purpleLight);
+}
+
+h2 {
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
+  line-height: 1.2;
+  margin-top: 0;
+}

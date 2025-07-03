@@ -1,0 +1,108 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;}
+html{font-size: 20px; line-height: 1.6;}
+body{color: #fff; background-color: dodgerblue;}
+a{color: gold;}
+
+.wrap{position: relative;}
+.header{height: 400px; padding: 2rem;}
+
+
+/* 활주로 */
+.airstrip{position: absolute;
+top: 0; width: 7px; height: 500px;
+margin-top: 400px;
+background-color: #fff;
+
+}
+.airstrip-a{left: 42%;}
+.airstrip-b{left: 58%;}
+
+/* 트랙 */
+.airplane-scroll-timeline{
+    position: relative;
+    height: 4305px;
+    margin: 200px 0 600px;
+    border: 10px solid greenyellow;
+    box-sizing: border-box;
+}
+.track{position: absolute;
+left: 50vw; transform: translateX(-50%);
+top: 0; width: 1048px;
+}
+.airplane{
+position: absolute;
+top: 0; left: 0; 
+width: 100px; 
+transform: rotate(180deg);
+offset-rotate: auto 90deg;
+offset-distance: 100%;
+will-change: offset-distance;
+offset-path: path("m523.89,4304.71v-102.65c0-380.2-349.01-699.56-349.01-699.56-444.83-376.4,250.93-486.65,250.93-486.65,444.83-102.65,557.68-250.93,557.68-250.93,283.93-319.37-486.96-646.34-486.96-646.34-258.91-112.16-314.04-296.55-314.04-296.55C-5.24,1295.45,395.39,1206.1,502.03,1255.07c65,29.84,105.64,109.85,90,179.91-35.06,157.03-234.66,151.32-234.66,151.32-287.05,0-340.67-193.9-340.67-193.9-85.15-285.15,215.21-534.18,215.21-534.18,309.81-245.7,291.98-636.53,291.98-636.53V0");
+}
+.flight-path{fill:none; stroke:#fff; stroke-width: 7;
+stroke-dasharray: 14;
+}
+
+
+/* gallery-timeline */
+.gallery-timeline{
+    position: absolute;
+    top: 2350px;
+    height: 2000px;
+    /* border: 10px dashed mediumspringgreen; */
+    left: 3%; width: 94%;
+   
+    
+}
+.gallery-timeline .gallery{
+    position: sticky;
+    top: 0;
+    display: flex;width: 350vw;
+    align-items: center;
+    height: 100vh;
+    /* border: 10px dashed deeppink; */
+    margin-top: -650px;
+    z-index: 10;
+    will-change: opacity, transform;/* //브라우저에게 애니메이션이 발생할것을 미리 알려줘서 최적화시킨다 */
+    
+}
+.gallery-timeline .gallery-item{width: 70vw;}
+.gallery-photo{
+    position: relative;
+    width: 50%;margin: 0 auto; 
+    height: 0; padding-top: 50%;
+    border-radius: 50%; overflow: hidden ;}
+.gallery-timeline .gallery-item img{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;}
+.jeju{position: sticky; top: 0; width: 360px;
+margin: 0 auto; padding-top: 340px;
+}
+
+
+
+
+.page-content{position: absolute;
+    left: 50vw; transform: translateX(-50%);
+    top: 0; width: 90%;
+    height: 100%; line-height: 1.6;
+    }
+    .page-content .text-block{
+        position: absolute;
+        width: 50%;
+        will-change: transform,opacity;
+        opacity: 0;
+        transition:0.3s;
+    }
+    .page-content .text{
+        position: absolute;
+        width: 50%;
+    }
+
+.hello-jeju{ fill:#fff; 
+ transform-origin:350px 1350px ;  
+ transition: 0.3s;
+}

@@ -1,0 +1,390 @@
+/* @font-face{
+    font-family:PPMori ;
+    src: url("PPMori-SemiBold.woff");
+}
+body{font-family: PPMori;} */
+/* 
+font-family: "Poppins", sans-serif;
+font-family: "Noto Sans KR", sans-serif; */
+
+*{margin: 0;padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+body{
+    background-color: #f3ede8;
+    font-family: "Poppins", sans-serif;
+}
+
+header{
+    display: flex; align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;top: 0;width: 100%;;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    z-index: 100;
+    padding: 20px;
+    box-sizing: border-box;
+}
+header h1{
+    font-size: 26px; text-align: center;
+    text-transform: uppercase; line-height: 1.2;
+}
+header h1 em{
+    display: block;
+    font-size: 10px; color: #8a8a8a;
+}
+header nav{}
+header nav ul{display: flex;}
+header nav ul li{}
+header nav ul li a{
+    font-size: 14px; padding: 14px;
+    text-transform: uppercase;display: block;
+}
+
+#section1{height: 100vh; padding-top: 20vh;}
+
+.about_title{margin-bottom: 20px;}
+.about_title .split{
+    font-size: 8vw;
+    line-height: 0.83;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.about_lines{}
+.about_lines>div{
+    background-color: #000;
+    margin-bottom: 10px;
+}
+.about_lines .line1{height: 1px;}
+.about_lines .line2{height: 3px;}
+.about_lines .line3{height: 6px;}
+.about_lines .line4{height: 9px;}
+.about_lines .line5{height: 12px;}
+.about_lines .line6{height: 15px;}
+.about_lines .line7{height: 18px;}
+.about_lines .line8{height: 21px;}
+
+.about_intro{
+    position: relative;
+    background-color: #cbc0b3;
+    display: grid;
+    place-items: center;
+    padding: 15vw 0;
+}
+.about_intro .text{
+    z-index: 20;
+    pointer-events: none;
+}
+.about_intro .text div{
+    font-size: 3.2vw; line-height: 1; font-weight: 700;
+    text-transform: uppercase; text-decoration: underline;
+    text-align: center;
+    color: #5f5953;
+}
+
+.wrap_3d{
+    width: 100vw; height: 40vw;
+    max-width: 1000px; max-height: 600px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+}
+.wrap_3d iframe{
+    width: 100%;height: 100%;
+}
+.wrap_3d .cover{
+    
+}
+
+
+/* section2 */
+#section2{margin-top: 15vw;}
+#section2 .intro_wrap{
+    display: flex; justify-content: space-between;
+}
+#section2 .intro_wrap .intro_title{
+    width: 45%;
+    font-size: 3vw; line-height: 1;
+    border-bottom: 1px solid #5f5953;
+    color: #2b2b2b;
+    height: 3.5vw;
+    position: sticky;
+    /* ★ 반드시 숙지 : sticky 사용 시 부모들 중에 overflow: hidden;이 있으면 안됨. */
+    top: 100px; /* 필수 */
+    padding-left: 15px;
+    text-transform: uppercase;
+
+    /* sticky는 부모의 top이 화면에 top에 도착하면
+    sticky를 걸어 놓은 자식이 그 자리에서 fixed된 것처럼 행동한다. */
+    /* position: sticky; top:0; 같이 설정하기 */
+
+}
+#section2 .intro_wrap .intro_desc{
+    width: 45%;
+}
+#section2 .intro_wrap .intro_desc h3{
+    font-size: 10vw;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #000;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #5f5953;
+}
+#section2 .intro_wrap .intro_desc p{
+    font-size: 20px;
+    padding: 5% 5% 30% 0;
+}
+
+
+/* section3 */
+#section3{}
+#section3 .pic_wrap{}
+
+#section3 .pic_wrap .pic_title{
+    position: sticky;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 3.5vw;
+    font-size: 3vw;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #2b2b2b;
+    border-bottom: 1px solid #5f5953;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+#section3 .pic_wrap .pic_title a{}
+#section3 .pic_wrap .pic_title a{}
+
+#section3 .pic_wrap .pic_desc{
+    position: sticky;
+    left: 0; top: 200px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+#section3 .pic_wrap .pic_desc .pic{
+    position: relative;
+    overflow: hidden;
+    background-color: #7e572b;
+}
+#section3 .pic_wrap .pic_desc .pic img{
+    width: 100%; opacity: 0.3;
+    transition: 0.3s;
+}
+    #section3 .pic_wrap .pic_desc .pic:hover img{opacity: 1;}
+#section3 .pic_wrap .pic_desc .pic .info{
+    position: absolute; 
+    left: 0; width: 100%;
+    background-color: #e4d5c358;
+    bottom: -46px;
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+    transition: 0.3s;
+}
+#section3 .pic_wrap .pic_desc .pic .info:hover{
+    bottom: 0;
+}
+#section3 .pic_wrap .pic_desc .pic .info h4{}
+#section3 .pic_wrap .pic_desc .pic .info a.link{
+    display: inline-block;
+    background-color: #7e572b;
+    color: #fff;
+    padding: 5px 20px;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+#section3 .pic_wrap .pic_desc .pic.p1 .info a.link{background-color: #2f3e3d;}
+#section3 .pic_wrap .pic_desc .pic.p2 .info a.link{background-color: #515985;}
+#section3 .pic_wrap .pic_desc .pic.p3 .info a.link{background-color: #b18b5a;}
+#section3 .pic_wrap .pic_desc .pic.p4 .info a.link{background-color: #bb7fc3;}
+
+/* section4 */
+#section4{margin-top: 15vw;}
+#section4 .port_wrap .port_title{
+    top: 100px;
+    position: sticky;
+    left: 0; width: 100%;
+    height: 3.5vw; font-size: 3vw;
+    line-height: 1;
+    font-weight: 900;text-transform: uppercase;
+    color: #2b2b2b;
+    border-bottom: 1px solid #5f5953;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+#section4 .port_wrap .port_title a{
+    font-size: 14px; font-weight: 500;}
+
+#section4 .port_wrap .port_desc{display: flex; width: 700%; gap:20px;  margin-top: 20px;}
+#section4 .port_wrap .port_desc .port{
+    width: 500px; background-color: #afa7a2;
+    padding: 40px ;padding-bottom: 60px;
+}
+#section4 .port_wrap .port_desc .port .img{
+    width: 100%; height: 300px; background-color: #000;
+    border-radius: 10px; display: block;
+    background-size: cover;
+    background-position: center;
+}
+#section4 .port_wrap .port_desc .port1 .img{
+    background-image: url(https://tympanus.net/codrops/wp-content/uploads/2023/07/gridflow_featured-1.jpg);}
+#section4 .port_wrap .port_desc .port2 .img{background-image: url(https://tympanus.net/codrops/wp-content/uploads/2023/09/griditemhover.gif?x34677);}
+#section4 .port_wrap .port_desc .port3 .img{background-image: url(https://tympanus.net/codrops/wp-content/uploads/2023/07/onscrollfilter_feat-2.jpg);}
+#section4 .port_wrap .port_desc .port4 .img{background-image: url(https://tympanus.net/codrops/wp-content/uploads/2023/06/gooeycursor_2.2023-06-07-10_54_11.gif?x34677);}
+#section4 .port_wrap .port_desc .port5 .img{background-image: url(https://tympanus.net/codrops/wp-content/uploads/2023/05/pixelloading-768x576.jpg);}
+#section4 .port_wrap .port_desc .port6 .img{background-image: url(	https://tympanus.net/codrops/wp-content/uploads/2023/05/gridtoslider_feat-768x576.jpg);}
+#section4 .port_wrap .port_desc .port7 .img{background-image: url(https://tympanus.net/codrops/wp-content/uploads/2023/04/viewswitch_feat-768x576.jpg);}
+#section4 .port_wrap .port_desc .port8 .img{background-image: url(	https://tympanus.net/codrops/wp-content/uploads/2023/03/ClipAnimation_featured-768x576.jpg);}
+#section4 .port_wrap .port_desc .port9 .img{background-image: url(https://tympanus.net/codrops/wp-content/uploads/2023/07/gridflow_featured-1.jpg);}
+#section4 .port_wrap .port_desc .port10 .img{
+    background-image: url(https://tympanus.net/codrops/wp-content/uploads/2023/03/clippath-768x576.jpg);
+}
+#section4 .port_wrap .port_desc .port11 .img{background-image: url(https://tympanus.net/codrops/wp-content/uploads/2023/01/circulartext.jpg?x34677);}
+#section4 .port_wrap .port_desc .port12 .img{background-image: url(	https://tympanus.net/codrops/wp-content/uploads/2022/11/inlinelayoutswitch_feat-768x576.jpg);}
+#section4 .port_wrap .port_desc .port13 .img{background-image: url(	https://tympanus.net/codrops/wp-content/uploads/2022/10/UnrevealEffects_feat-768x576.jpg);}
+#section4 .port_wrap .port_desc .port14 .img{background-image: url(https://tympanus.net/codrops/wp-content/uploads/2022/10/ScrollAnim_feat.jpg?x34677);}
+#section4 .port_wrap .port_desc .port15 .img{background-image: url(https://tympanus.net/codrops/wp-content/uploads/2022/09/GlitchPers_feat-768x576.jpg);}
+#section4 .port_wrap .port_desc .port16 .img{background-image: url(https://tympanus.net/codrops/wp-content/uploads/2022/08/fullscreenscroll_feat-400x300.jpg);}
+#section4 .port_wrap .port_desc .port17 .img{background-image: url(	https://tympanus.net/codrops/wp-content/uploads/2022/08/ImageToContent_feat-768x576.jpg);}
+#section4 .port_wrap .port_desc .port18 .img{background-image: url(https://tympanus.net/codrops/wp-content/uploads/2022/06/MakeWay_feat-400x300.jpg);}
+#section4 .port_wrap .port_desc .port19 .img{background-image: url(	https://tympanus.net/codrops/wp-content/uploads/2022/05/ImageToGridTransition-768x576.jpg);}
+#section4 .port_wrap .port_desc .port20 .img{background-image: url(https://tympanus.net/codrops/wp-content/uploads/2022/05/StackLayoutTransition_featured-768x576.jpg);}
+
+
+/* section5 */
+#section5{margin-top: 15vw;}
+#section5 .interview_wrap{}
+#section5 .interview_title{
+    position: sticky;
+    top: 100px;
+    left: 0; width: 100%;
+    height: 3.5vw; font-size: 3vw; line-height: 1;
+    text-transform: uppercase;
+    color: #2b2b2b;
+    border-bottom: 1px solid #5f5953;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+#section5 .interview_title a{font-size: 14px; font-weight: 500;}
+#section5 .interview_desc{
+    position: sticky ; left: 0; top: 180px;
+    height: 700px; margin-top: 20px;
+    padding: 2%; display: flex; justify-content: space-between;
+    background-color: #b7b7b7;
+    border: 1px solid #000;  
+}
+#section5 .interview_desc .left{
+    width: 67%;
+    position: relative;
+}
+#section5 .interview_desc .left::before{
+    content: "인터뷰 보기";
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    opacity: 1;
+    width: 250px; height: 250px; 
+   
+    background-size: cover;
+    /* background-color: #000; */
+    transition: 0.4s;
+    z-index: 20;
+    font-size: 40px;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-radius: 50%;
+    border: 1px solid #2b2b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#section5 .interview_desc .left::after{
+    content: "";
+    width: 100%; height: 100%;
+    position: absolute;
+    left: 0; top: 0;
+    background-color: #b7b7b7;
+    transition: 0.6s;
+    margin: auto; transform:scale(1);
+    opacity: 1;
+}
+
+#section5 .interview_desc .left:hover::before{
+    transform: translate(-50%,-50%) scale(0);
+    opacity: 0;
+}
+#section5 .interview_desc .left:hover::after{
+     opacity: 0;
+     transform:scale(0);
+}
+
+#section5 .interview_desc .left iframe{
+    width: 100%; height: 100%;
+}
+
+
+#section5 .interview_desc .right{
+    width: 30%;
+}
+
+
+#section6{margin-top: 15vw;}
+.review_wrap{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 900; 
+}
+.review_title{
+    position: sticky;
+    top: 100px; left: 0; 
+    width: 100%; height: 3.5vw;
+    line-height: 1; 
+    text-transform: uppercase;
+    color: #2b2b2b;
+    border-bottom: 1px solid #5f5953;
+    font-size: 3vw;
+}
+.review_desc{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:1%;
+    padding-top: 20px;
+}
+.review_desc>div{
+    width: 32.6%; border: 1px solid #000;
+    height: 300px; margin-bottom: 1%;  
+    position: sticky;
+    box-sizing: border-box;
+    left: 0; background-color: #e5d5c3;
+    padding: 1%; padding-top: 2%;
+}
+.review_desc>div h4{margin-bottom: 20px;}
+.review_desc>div.rd1{top: 200px;}
+.review_desc>div.rd2{top: 200px; margin-top: 100px;}
+.review_desc>div.rd3{top: 200px; margin-top: 200px;}
+.review_desc>div.rd4{top: 240px; margin-top: 300px;}
+.review_desc>div.rd5{top: 240px; margin-top: 400px;}
+.review_desc>div.rd6{top: 240px; margin-top: 500px;}
+.review_desc>div.rd7{top: 280px; margin-top: 600px;}
+.review_desc>div.rd8{top: 280px; margin-top: 700px;}
+.review_desc>div.rd9{top: 280px; margin-top: 800px;}
+
+#section7{margin-top: 15vw;}

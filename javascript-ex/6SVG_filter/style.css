@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+body{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background-color: #222;
+}
+
+svg{display: none;}
+h1{
+    background-image: linear-gradient(black, #888);
+    color: transparent;
+    background-clip: text; /* //cliping mask 기능 */
+    -webkit-text-stroke: 1px rgb(200, 200, 200);
+    animation: scribble infinite 0.2s;
+}
+h1:hover{
+    animation-play-state: paused;
+}
+
+@keyframes scribble{
+    0%{filter: url("#scriblle--0");}
+    25%{filter: url("#scriblle--1");}
+    50%{filter: url("#scriblle--2");}
+    75%{filter: url("#scriblle--3");}
+    100%{filter: url("#scriblle--4");}
+}

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;
+box-sizing: border-box;}
+
+.container{border: 2px solid #000;
+background-color: yellow;
+display: flex;
+}
+
+.container .item{
+/* display : "flex"에서 자식은 줄어들어라, 늘어나지마라.
+자식은 부모의 공간에 모두 다 들어간다. */
+border: 2px solid #000;
+background-color: green;
+width: 25%;
+}

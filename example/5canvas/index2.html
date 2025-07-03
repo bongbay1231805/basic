@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="canvas" width="600" height="400"></canvas>
+
+    <div class="imgWrap"></div>
+
+    <img src="" alt="">
+    <script>
+        let canvas=document.querySelector(".canvas")
+        let content=canvas.getContext('2d')
+
+        let imgWrap=document.querySelector(".imgWrap")
+        //태그만들기
+        //p태그만들기
+        //1) let pEle=document.createElement('p')
+
+        //img 태그 만들기
+        //1) let imgEle=document.createElement('img')
+        
+        //<img scr="이미지주소" alt="설명글">
+        let imgEle=new Image();
+        imgEle.src="https://img.freepik.com/free-photo/closeup-shot-of-a-cute-golden-retriever-puppy-curiously-looking-at-the-camera_181624-15694.jpg"
+        imgEle.alt="배경"
+
+        //content.drawImage(imgEle,50,50)
+        //content.drawImage(imgEle,50,50,70,120)
+        
+        context.drawImage(imgEle,0,0,200,200,0,0,100,100)
+        //이미지내의 (0,0)지점 부터 공간 200,200까지가
+        //canvas의 위치 0,0 지점 부터 공간 100,100위치까지의 공간사이에 그려진다.
+
+        //뒤에 4개의 값은 canvas(캔버스 공간에 대한 정보)
+        //앞의 4개의 값은 이미지이다.(이미지 공간에 대한 정보)
+
+        // context.drawImage(imgEle,
+        // 이미지내에서의 x위치,
+        // 이미지내에서의 y위치,
+        // 이미지내에서의 x위치로부터 넓이값,
+        // 이미지내에서의 y위치로부터 높이값,
+        // 컨버스의 시작위치 x,
+        // 컨버스의 시작위치 y,
+        // 컨버스의 시작위치 x로 부터의 넓이값,
+        // 컨버스의 시작위치 x로 부터의 높이값,
+        // )
+
+
+        context.drawImage(imgEle,50,50,200,200,100,100,200,200)
+
+
+
+
+
+    </script>
+</body>
+</html>

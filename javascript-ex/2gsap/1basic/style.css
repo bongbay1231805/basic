@@ -1,0 +1,66 @@
+
+
+*{margin: 0;padding: 0;}
+
+li{list-style: none;}
+
+
+section{height: 100vh; background-color: #000;
+color: #fff; display: flex; justify-content: center; align-items: center;
+}
+
+
+.sec01 .title{font-size: 120px; text-transform: uppercase;
+    line-height: 1.1;
+}
+.sec01 .title span{
+    display: block;
+}
+
+
+.sec02 ul{display: flex; width: 70%; justify-content: space-between;}
+.sec02 ul li{width: 22%; background-color: rgb(84, 84, 174);
+    height: 300px; border-radius: 20px;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.sec03{position: relative;}
+.sec03 .contitle{color: #fff;font-size: 100px;}
+.sec03 span{
+    display: block;
+    width: 250px; height: 350px;
+    background-color: rgb(135, 156, 250);
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgb(53, 70, 148); font-family: 30px;
+    /* 가운데 정렬
+    display: flex; justify-content: center; align-items: center;
+    */
+    
+    /* grid 가운데 정렬 */
+    display: grid;
+    place-items: center;
+}
+.sec03 span.a{transform: translate(-50%,-50%) rotate(-12deg);}
+.sec03 span.b{
+    transform: translate(-50%,-50%) rotate(12deg);
+    background-color: rgb(101, 120, 205);
+
+}
+.sec03 span.c{
+    transform: translate(-50%,-50%) rotate(-15deg);
+    background-color: rgb(64, 78, 144);
+}
+.sec03 span.d{
+    transform: translate(-50%,-50%) rotate(18deg);
+    background-color: rgb(31, 41, 88);
+}
+.sec03 span.e{
+    transform: translate(-50%,-50%) rotate(-3deg);
+    background-color: rgb(13, 20, 54);
+
+}

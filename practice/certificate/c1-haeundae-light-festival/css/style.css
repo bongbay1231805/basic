@@ -1,0 +1,174 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+body{
+    background-color: #fff;
+    color: #333;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+#wrap{
+    width: 1000px;
+    display: flex;
+}
+/* header */
+#header{
+    width: 15%;
+    height: 650px;
+}
+#header .logo{
+    width: 100%;
+    height: 20%;
+    background-color: #111;
+}
+#header .nav{
+    width: 100%;
+    height: 80%;
+    background-color: pink;
+}
+/* nav */
+.nav>ul{
+    text-align: center;
+}
+.nav>ul>li{}
+.nav>ul>li>a{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    width: 100%;
+}
+.nav>ul>li>a:hover{
+    background-color: #ccc;
+}
+.nav>ul>li>ul{
+    display: none;
+}
+.nav>ul>li>ul>li{}
+.nav>ul>li>ul>li>a{
+    display: inline-block;
+    padding: 10px;
+    background-color: #f2adad;
+    width: 100%;
+}
+.nav>ul>li>ul>li>a:hover{
+    background-color: #cd8a8a;
+}
+
+/* wrap_right */
+#wrap_right{
+    width: 85%;
+}
+
+/* slider */
+#slider{
+    width: 100%;
+    overflow: hidden;
+}
+.sliderWrap{
+    position: relative;
+    height: 350px;
+}
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.slide img{
+    width: 1000px;
+    height: 350px;
+}
+.slide span{
+    position: absolute;
+    top: 40%;
+    left: 36%;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+}
+
+#contents{
+    width: 100%;
+    display: flex;
+}
+.tab{
+    width: 33.3333%;
+    background-color: #444;
+    padding: 10px;
+    position: relative;
+}
+.info{
+
+}
+.info .info_tit{
+    
+}
+.info .info_tit a{
+    display: inline-block;
+    padding: 10px;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-bottom: 10px;
+}
+.info .info_cont{
+}
+.info .info_cont .notice{}
+.info .info_cont .notice>ul>li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    color: #fff;
+}
+.notice>ul>li>a{
+    color: #fff;
+}
+.info .info_cont .gallery{
+    position: absolute;
+    top: 85px;
+    left: 16px;
+}
+.info .info_cont .gallery img{
+    width: 80px;
+    height: 80px;
+}
+
+
+
+.banner{
+    width: 33.3333%;
+    height: 200px;
+    background-color: #555;
+}
+.link{
+    width: 33.3333%;
+    height: 200px;
+    background-color: #666;
+}
+
+#footer{
+    width: 100%;
+    display: flex;
+}
+.f_logo{
+    width: 20%;
+    height: 100px;
+    background-color: #777;
+}
+.f_right{
+    width: 80%;
+}
+.f_right .f_menu{
+    width: 100%;
+    height: 50px;
+    background-color: #888;
+}
+.f_right .f_copy{
+    width: 100%;
+    height: 50px;
+    background-color: #999;
+}

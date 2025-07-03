@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #faad80;
+}
+
+.world {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    perspective: 1000px;
+}
+
+.world .stage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+
+.world .stage .house {
+    width: 100vw;
+    height: 100vh;
+    transform-style: preserve-3d;
+    transform: translateZ(-490vw);
+}
+
+.world .stage .house .wall {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.world .stage .house .wall-left {
+    width: 1000vw;
+    background-color: #f8f8f8;
+    transform: rotateY(90deg) translateZ(-500vw);
+}
+
+.world .stage .house .wall-right {
+    width: 1000vw;
+    background-color: #f8f8f8;
+    transform: rotateY(90deg) translateZ(-400vw);
+}
+
+.world .stage .house .wall-front-a{transform: translateZ(300vw);}
+.world .stage .house .wall-front-b{transform: translateZ(50vw);}
+.world .stage .house .wall-front-c{transform: translateZ(-200vw);}
+.world .stage .house .wall-front-d{transform: translateZ(-500vw);}

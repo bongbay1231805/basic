@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Price filter</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Filter Challenge</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Product Filter</h1>
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search by name or price...">
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="furniture">Furniture</option>
+        <option value="clothing">Clothing</option>
+      </select>
+      <button id="sortPriceAsc">Sort by Price (Asc)</button>
+      <button id="sortPriceDesc">Sort by Price (Desc)</button>
+      <button id="clearFilters">Clear Filters</button>
+    </div>
+    <ul id="productList">
+      <!-- Product items will be inserted here by JavaScript -->
+    </ul>
+  </div>
+
+  <!-- Modal for product details -->
+  <div id="productModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalPrice"></p>
+      <p id="modalCategory"></p>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

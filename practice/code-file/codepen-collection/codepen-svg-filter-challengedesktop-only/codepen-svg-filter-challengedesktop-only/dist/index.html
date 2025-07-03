@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Codepen SVG filter challenge - desktop only</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Zeyada&amp;display=swap'>
+<link rel='stylesheet' href='https://codepen.io/nocni_sovac/pen/bGMmJqR/57c415999e9f8fcd0d3eb635433fc63e.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- Inspiration
+https://tympanus.net/codrops/2023/07/05/on-scroll-svg-filter-effect/ -->
+
+<div id="content">
+    <section class="section-one">
+        <p class="title"><span>Codepen</span> SVG Filters Chalenge</p>
+        <p>Scroll</p>
+        <span class="scroll-text">Down</span>
+    </section>
+    <section class="section-two">
+        <div class="container container-one">
+            <span class="left-title">Purple13</span>
+            <span class="right-title">Design</span>
+            <p>
+                Shadows cast by the fading light,<br>
+                Whispers of the wind, a forlorn sigh,<br>
+							Samo se u mirnoj vodi mesec jasno ogleda, <br>
+                Under the watch of the indigo sky.</p>
+            <svg class="content__img" width="400" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                    <filter id="sandy">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="13" result="noise" />
+                        <feDisplacementMap in="SourceGraphic" in2="noise" scale="60" xChannelSelector="R" yChannelSelector="G" />
+                    </filter>
+                    <mask id="circleMask">
+                        <circle cx="250" cy="350" r="0" fill="white" class="dmslt" />
+                    </mask>
+                </defs>
+                <image href="https://i.pinimg.com/736x/dc/67/3c/dc673c63b476aaee9f32179eba48f355.jpg" width="400" height="100%" mask="url(#circleMask)" style="translate: none;rotate: none;scale: none;transform-origin: 0px 0px;filter: brightness(120%);" data-svg-origin="500 225" transform="matrix(1.2,0,0,1.2,-100,-45)" />
+            </svg>
+
+            <div class="shadow"></div>
+        </div>
+    </section>
+    <section class="section-three">
+        <div class="container container-two">
+            <div class="title-top">
+                <p>Unbecoming</p>
+            </div>
+            <svg class="content__img" width="1000" height="450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 450">
+                <defs>
+                    <filter id="sandy2">
+                        <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="1" result="noise"></feTurbulence>
+                        <feDisplacementMap in="SourceGraphic" in2="noise" result="displacement" scale="124" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+                        <feMorphology operator="dilate" radius="2" result="morph" in="displacement"></feMorphology>
+                    </filter>
+                    <mask id="circleMask2">
+                        <circle cx="50%" cy="50%" r="0" fill="white" class="dmslt2" data-value-final="1000" />
+                    </mask>
+                </defs>
+                <image href="https://motionbgs.com/i/c/960x540/media/74/neon-alley.1920x1080.jpg" width="1000" height="571" mask="url(#circleMask2)" style="translate: none;rotate: none;scale: none;transform-origin: 0px 0px;filter: brightness(120%);" />
+            </svg>
+            <div class="text-bottom-left">
+                The heart's lament, a raven's flight,
+                Through the silence, the owls reply,
+                In the purple night, where dreams may die.
+
+                Chains of sorrow, too heavy to fight,
+							Ja volim reč, jer samo rečju
+Mogu da pevam ode tišini.
+                The heart's lament, a raven's flight,
+                Through the silence, the owls reply,
+                In the purple night, where dreams may die.
+            </div>
+            <div class="text-bottom-right">
+                <p> Purple Night</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<!-- <div class="fullscreen-btn">
+	Full Screen
+</div> -->
+<!-- partial -->
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+<script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+<script src='https://assets.codepen.io/16327/ScrollSmoother.min.js'></script>
+<script src='https://unpkg.com/gsap@3/dist/TextPlugin.min.js'></script>
+<script src='https://codepen.io/nocni_sovac/pen/bGMmJqR/57c415999e9f8fcd0d3eb635433fc63e.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

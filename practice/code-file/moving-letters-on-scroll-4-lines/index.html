@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- https://www.youtube.com/watch?v=uJmQ7rGhYf0 -->
+    <div id="main">
+        <div class="part-1"></div>
+        <div class="part-2">
+            <div class="strip strip-r">
+                <h1>ONE
+                    <span>ONE</span> ONE
+                    <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span>
+                    ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE
+                    <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span>
+                </h1>
+            </div>
+            <div class="strip strip-l">
+                <h1>ONE
+                    <span>ONE</span> ONE
+                    <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span>
+                    ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE
+                    <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span>
+                </h1>
+            </div>
+            <div class="strip strip-r">
+                <h1>ONE
+                    <span>ONE</span> ONE
+                    <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span>
+                    ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE
+                    <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span>
+                </h1>
+            </div>
+            <div class="strip strip-l">
+                <h1>ONE
+                    <span>ONE</span> ONE
+                    <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span>
+                    ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE
+                    <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span>
+                </h1>
+            </div>
+            <div class="strip strip-r">
+                <h1>ONE
+                    <span>ONE</span> ONE
+                    <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span>
+                    ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE
+                    <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span> ONE <span>ONE</span>
+                </h1>
+            </div>
+        </div>
+        <div class="part-3"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script>
+        var tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".part-2",
+                start: "top 90%",
+                end: "180% 90%",
+                markers: true,
+                scrub: true
+            }
+        });
+
+
+        tl.to(".strip-l", {marginLeft: "0%"},'name')
+        tl.to(".strip-r",{ marginLeft: "-50%"},'name')
+               
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+@charset "utf-8";
+*{margin: 0;padding: 0; box-sizing: border-box;}
+
+
+.container{
+    background-color: yellow;
+    border: 2px solid #000;
+}
+.container .item{
+    background-color: green;
+    border: 2px solid #000;
+}
+
+/* justify-content
+grid 아이템들의 넓이를 모두 합한 값이 부모요소인 container보다 작을 때
+grid 아이템들을 통째로 묶어서 정렬하는 방식
+
+*/
+.container{
+    display: grid;
+    justify-content: stretch;/* 기본값 */
+    
+    height: 100vh;
+
+}
+
+.container .item{}

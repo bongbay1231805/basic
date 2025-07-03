@@ -1,0 +1,154 @@
+
+
+
+*{margin: 0; padding: 0;
+color: #333; font-size: 14px;
+}
+body{font-family: "Noto Sans KR", sans-serif;}
+li{list-style: none;} /* 기호제거 */
+a{text-decoration: none;} /* a태그에 나타나는 밑줄 제거 */
+img{width: 100%; display: block;}
+
+    /* img태그가 인라인 요소이기 때문에 아래에 빈공간이 생길 수 잇다
+    [해결방법]
+    1) display: block;
+    2) vertical-align : top; */
+    
+    /* 인라인 요소는 공간에 대한 개념 없음
+    단, img태그와 button태그는 공간을 인식한다. */
+
+.clearfix::after{content: ""; clear: both; display: block;}
+
+.container{width: 1200px; margin: 0 auto;}
+
+/* header */
+.header{}
+.header h1{width: 200px; height: 100px;
+    float: left;
+}
+.header .gnb{float: right;}
+.header .gnb ul{}
+.header .gnb>ul>li{
+    position: relative;
+    float: left; width: 150px; height: 100px;
+text-align: center; line-height: 100px;}
+
+.header .gnb ul li a.mainnav{display: block;
+font-size: 18px; font-weight: bold; color: #333;
+transition: 0.3s; /* 1s = 1000ms 0.3s = 300ms */
+/*bgc rgba(0,0,0,0.4) = rgba(0,0,0,.4) */
+}
+
+.header .gnb ul li:hover a.mainnav{
+    color: #0b7245; border-bottom: 3px solid #0b7245;
+}
+
+.header .gnb .subnav{
+    display: none;
+    position: absolute; top: 100px; left: 0;
+    width: 150px; height: 200px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    z-index: 100;
+    background-color: #fff;
+}
+.header .gnb li:first-child .subnav{border-left: 1px solid #ccc;}
+.header .gnb li:last-child .subnav{border-right: 1px solid #ccc;}
+
+/*
+조건) 한부모의 자식들
+li:first-child --> li 중에서 첫째 자식
+li:last-child --> li 중에서 마지막 자식 
+li:nth-child(3) --> li 중에서 세번째 자식
+li:nth-child(2n) --> li 중에서 짝수 자식
+li:nth-child(even) --> li 중에서 짝수 자식
+li:nth-child(2n+1) --> li 중에서 홀수 자식
+li:nth-child(odd) --> li 중에서 홀수 자식*/
+
+.header .gnb .subnav li{height: 50px;line-height: 50px;}
+.header .gnb .subnav li a{display: block; transition: 0.3s;}
+.header .gnb .subnav li a:hover{background-color: #0b7245; color: #fff;}
+
+/* main */
+.main{position: relative; height: 300px; overflow: hidden;}
+.main ul{position: absolute; left: 0; top: 0;
+
+}
+.main ul li{}
+.main ul li a{}
+.main ul li a img{}
+
+/* contents */
+.contents{margin: 20px auto;} /* 단축키 m20-0 */
+.contents>div{float: left; width: 400px; height: 200px;
+    box-sizing: border-box; padding: 5px 20px;
+}
+.contents .banner{}
+.contents .now{}
+.contents .board{padding: 0 20px;}
+.contents .board .btn{
+    border-bottom: 1px solid #999;
+}
+.contents .board .btn li{float: left; margin: 0 10px;
+line-height: 49px;
+}
+.contents .board .btn li a{display: block;}
+.contents .board .btn li.active a{color: #0b7245;
+border-bottom: 3px solid#0b7245;}
+
+.notice{}
+.notice ul{}
+.notice ul li{
+    padding-left: 7px;
+    position: relative;
+    height: 30px; line-height: 30px;}
+.notice ul li::before{
+    content: "";
+    width: 2px;height: 2px;
+    background-color: #222;
+    position: absolute;
+    left: 0; top: 15px;
+}
+.notice ul li a{float: left; 
+    font-size: 12px;}
+.notice ul li .date{float: right; font-size: 12px;
+padding-right: 10px;
+}
+
+.gallery{display: none;}
+.gallery ul{padding: 25px 0;}
+.gallery ul li{float: left; margin: 0 10px;}
+.gallery ul li a{}
+.gallery ul li a:hover img{opacity: 0.5;}
+
+/* footer */
+.footer{background-color: #333; line-height: 100px; }
+.footer>*{ /* footer의 바로밑 하위요소 모두다 */
+  float: left; height: 100px;
+  width: 200px;
+}
+.footer h2{}
+.footer h2 a{}
+.footer h2 a img{}
+.footer p{color: #fff; width: 800px; text-align: center;}
+.footer ul{}
+.footer ul li{float: left; margin-right: 10px;}
+.footer ul li:last-child{margin-right: 0;}
+.footer ul li a{font-size: 12px;}
+.footer a{color: #fff;}
+
+/* popup */
+.popup{
+    display: none;
+    position: fixed; 
+    top: 200px;
+    left: 0; right: 0;
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    margin:0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.popup div{font-size: 16px;}
+.popup .close{position: absolute; right: 20px; bottom: 20px;}

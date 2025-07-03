@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Video Control Button</title>
+</head>
+<body>
+  <div class="container">
+    <div class="video-wrapper">
+      <figure>
+        <video  class="video" autoplay>
+          <source src="./video1.mp4">
+        </video>
+
+        <button class="btn">
+          <div class="icons stop">
+            <i onclick="playVid()" class="fa-solid fa-play"></i>
+            <i onclick="pauseVid()" class="fa-solid fa-pause"></i>
+          </div>
+
+          <div class="time">
+            <label id="minuts">00</label>
+            <label id="colon">:</label>
+            <label id="seconds">00</label>
+          </div>
+        </button>
+      </figure>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>

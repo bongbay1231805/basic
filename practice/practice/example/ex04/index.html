@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrap">
+        <h2>사용자로부터 입력받기</h2>
+        <div class="first">
+            <form action="#">
+                <label for="name">name</label>
+                <input type="text" id="name" name="my-name">
+                <br><br>
+                <label for="age">age</label>
+                <input type="number" id="age" name="my-age">
+                <br><br>
+                <button type="submit">submit</button>
+                <button type="reset">reset</button>
+            </form>
+        </div>
+
+        <div class="second">
+            <form action="#">
+                <fieldset>
+                    <legend>leader</legend>
+                    <label for="name1">name</label>
+                    <input type="text" id="name1" name="name-1">
+                    <br><br>
+                    <label for="age1">age</label>
+                    <input type="number" name="age-1" id="age">
+                </fieldset>
+
+                <fieldset>
+                    <legend>second leader</legend>
+                    <label for="name2">name</label>
+                    <input type="text" id="name2" name="name-2">
+                    <br><br>
+                    <label for="age2">age</label>
+                    <input type="number" name="age-2" id="age2">
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="third">
+            <form action="#">
+                <label for="txt">text</label>
+                <input type="text" id="txt" placeholder="5under" maxlength="5">
+                <br><br>
+                <label for="src">search</label>
+                <input type="search" name="search" id="src">
+                <br><br>
+                <button type="submit">submit</button>
+            </form>
+        </div>
+
+        <div class="fourth">
+            <label for="number">number</label>
+            <input type="number" name="num" id="num" min="0"max="10">
+
+            <label for="rg">range</label>
+            <input type="range" id="rg" min="0" max="100" step="20">
+
+            <label for="dt">date</label>
+            <input type="date" name="dt" id="dt" min="2020-01-01" max="2025-12-31">
+
+            <form action="#">
+                <label for="name3">name</label>
+                <input type="text" id="name3" required>
+
+                <label for="part">webclass</label>
+                <input type="text" id="part" value="webclass" readonly>
+                <button type="submit"button></button>
+            </form>
+        </div>
+
+        <div class="fifth">
+            <h3>memo</h3>
+            <label for="mg">write message.</label>
+            <textarea name="msg" id="mg" cols="100" rows="10"></textarea>
+        </div>
+
+        <div class="sixth">
+            <h3>select, opation tag</h3>
+            <label for="lang">language</label>
+            <select name="lang" id="lang">
+                <option value="">--language</option>
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="javaScript">javaScript</option>
+                <option value="React">React</option>
+            </select>
+
+            <h3>optgroup tag</h3>
+            <label for="shopping">shopping list</label>
+            <select name="shop" id="shopping">
+                <optgroup label="fruit">
+                    <option value="f_ap1">apple</option>
+                    <option value="f_grp">grape</option>
+                    <option value="f_ora">orange</option>
+                </optgroup>
+                <optgroup></optgroup>
+            </select>
+        </div>
+        <div class="seventh"></div>
+    </div>
+</body>
+</html>

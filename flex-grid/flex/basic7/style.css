@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;
+box-sizing: border-box;}
+
+.container{border: 2px solid #000;
+background-color: yellow;
+display: flex;
+}
+
+.container .item{
+border: 2px solid #000;
+background-color: green;
+}
+
+
+.container{
+    display: flex;
+    /* flex-wrap: wrap; */
+    
+    /* flex 설정시 item들은 "줄어들어라, 늘어나지마라" 기본속성 */
+    
+}
+/* 0 --> fasle, 0을 제외한 나머지수 --> true
+false와 true를 구별할때 0과 1로 표현함 */
+
+/* flex-grow는 flex-basis보다 커질 수 있는 지를 결정, 0보다 큰값이 들어가면 늘어난다. 기본값이 0으로 늘어나지 않는다.
+
+flex-shrink는 flex-basis보다 작아질 수 있는 지를 결정, 기본값이 1이므로 flex-basis보다 줄어든다. 
+flex-shrink:0;은 flex-basis보다 작아지지 않는다.
+*/
+
+.item{
+    /* flex-grow: 1;
+    flex-basis: 200px;
+    flex-shrink: 0; */
+
+    /*flex:auto;  기본값, flex-basis가 auto라는 의미는 자식이 가진 공간만큼은 기본적으로 확보한다. */
+    /* 단축해서 적었을때 flex-basis:0%가 적용됨 */
+    /* flex: 0; 값을 하나 주었을때 값은 flex-grow가 바뀌는 값이다.
+    flex-shrink:1, flex-basis:0% */
+
+    /*flex: 1 1;  flex-grow: 1; flex-shrink: 1; flex-basis: 0%; */
+    /*flex: 1 200px; flex-grow: 1; flex-shrink: 1; flex-basis: 200px; */
+
+}
+
+.header{width: 100px; flex-shrink: 0;}
+.banner{width: 60%;}
+.content{width: 20%;}

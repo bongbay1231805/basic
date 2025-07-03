@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+$bg-color: #5F10F5;
+$bg-light-color: #9f70f9;
+$ball-color: #ffffff;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  font-size: 4rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+  height: 100vh;
+  background-color: $bg-color;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+body::before {
+  content: 'Click to create | Esc to clean';
+  display: inline-block;
+  position: absolute;
+  color: $bg-light-color;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  background-color: white;
+  box-shadow: 2px 2px 20px 8px rgba(0, 0, 0, .4);
+  transition: left 2s linear, top 2s linear;
+}

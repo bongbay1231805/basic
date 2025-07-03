@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .wrap {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            width: 600px;
+            margin: 50px auto;
+        }
+
+        .wrap>div {margin: 0;}
+    </style>
+</head>
+
+<body>
+
+    <div class="wrap">
+        <div class="하나">하나</div>
+        <div class="둘">둘</div>
+        <div class="셋">셋</div>
+        <div class="하나">하나</div>
+        <div class="둘">둘</div>
+        <div class="셋">셋</div>
+        <div class="하나">하나</div>
+        <div class="둘">둘</div>
+        <div class="셋">셋</div>
+        <div class="하나">하나</div>
+        <div class="둘">둘</div>
+        <div class="셋">셋</div>
+        <div class="하나">하나</div>
+        <div class="둘">둘</div>
+        <div class="셋">셋</div>
+        <div class="하나">하나</div>
+        <div class="둘">둘</div>
+        <div class="셋">셋</div>
+        <div class="하나">하나</div>
+        <div class="둘">둘</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script>
+    let tl=gsap.timeline()
+    tl.from(".wrap>div",{opacity:0,duration:1,stagger:{
+        grid:[4,5],
+        from:"edges",
+        amount:1.5
+    }})
+
+
+
+
+    </script>
+</body>
+
+</html>

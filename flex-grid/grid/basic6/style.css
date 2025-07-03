@@ -1,0 +1,51 @@
+@charset "utf-8";
+*{margin: 0;padding: 0; box-sizing: border-box;}
+
+
+.container{
+    background-color: yellow;
+    border: 2px solid #000;
+}
+.container .item{
+    background-color: green;
+    border: 2px solid #000;
+}
+
+/* 
+grid-colum, grid-row
+grid에서는 라인이 있는데 그 라인에는 번호가 있다.
+각셀별로 영역을 지정할 수 있다. item(자식)에 지정해 주어야 한다.
+*/
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(100px,auto);
+    gap: 1rem;
+
+}
+
+.container .item{
+    font-size: 30px;
+}
+
+.container .item:nth-child(1){
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+    grid-column: 1/3; 라인번호 1~3까지, 번호가 라인 번호라는 것을 기억해야 함. */
+    grid-column: 1/4;
+}
+.container .item:nth-child(2){
+    /* grid-row-start: 2;
+    grid-row-end: 4; */
+    grid-column: 1/4;
+    grid-row: 2/4;
+    grid-column: 1/span 3; /* 1번부터 시작해서 3칸을 차지한다. */
+    grid-row: 2/span 2; /* 2번부터 시작해서 2줄을 차지한다. */
+}
+.container .item:nth-child(3){
+    grid-column: 1; /* end를 적지 않았다면 기본이 한칸이다, end는 생략할 수 있다. */
+    grid-column: 1/span 2;
+}
+.container .item:nth-child(4){
+   
+}

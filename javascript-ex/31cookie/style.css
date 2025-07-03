@@ -1,0 +1,14 @@
+@charset "UTF-8";
+*{margin: 0; padding: 0;}
+
+.notice{
+    position:fixed;
+    top: 100px; left: 100px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+.notice .close{position: absolute;
+top: 0; right: 0;
+}
+.notice img{width: 100%;}

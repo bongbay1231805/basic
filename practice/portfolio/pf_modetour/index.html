@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>모두투어</title>
+
+  <!-- font pretendard -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <!-- slick -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- 💛💛header💛💛 -->
+    <header class="header">
+      <h1 class="main_logo">
+        <a href="#"><img src="img/logo.png" alt="logo" /></a>
+      </h1>
+      <nav class="main_nav">
+        <ul>
+          <li><a href="#">Travel</a></li>
+          <li><a href="#">Benefits</a></li>
+          <li><a href="#">Event</a></li>
+          <li><a href="#">Live</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 💛💛mv💛💛 -->
+    <section class="mv">
+      <video muted autoplay loop>
+        <source src="./video/portfolio_modetour_video.mp4" type="video/mp4" />
+      </video>
+      <div class="main_tit">
+        <h1 class="logo">
+          <img src="img/logo_white.png" alt="logo_white" />
+        </h1>
+        <div class="main_sub">
+          <h3 class="seoul">Seoul</h3>
+          <div class="clock">
+            <div class="time_box">
+              <span class="txt_lg" id="hoursTens">0</span>
+              <span class="txt_lg" id="hoursOnes">0</span>
+              <span class="mark">:</span>
+              <span class="txt_lg" id="minTens">0</span>
+              <span class="txt_lg" id="minOnes">0</span>
+              <span class="mark">:</span>
+              <span class="txt_lg" id="secTens">0</span>
+              <span class="txt_lg" id="secOnes">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main_search">
+        <form action="#">
+          <input type="text" class="search" placeholder="검색어를 입력해 주세요." />
+        </form>
+        <span><i class="fas fa-search"></i></span>
+      </div>
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Travel</a></li>
+          <li><a href="#">Benefits</a></li>
+          <li><a href="#">Event</a></li>
+          <li><a href="#">Live</a></li>
+        </ul>
+      </nav>
+    </section>
+
+    <!-- 💛💛section1💛💛 -->
+    <section class="section1">
+      <div class="section1Wrap">
+        <div class="sws main_country">
+          <div class="main_sws main">
+            <div class="tracker">
+              <h3 class="switzerland coun_tit">Switzerland</h3>
+              <div class="sub_sws coun_sub">
+                <img src="img/schilthorn.png" alt="schilthorn" />
+              </div>
+            </div>
+            <div class="co_clock_wrap">
+              <div class="co_clock_time">[현재 시각]</div>
+              <div class="co_clock">
+                <div class="time_box_co">
+                  <span class="txt_lg_co" id="hours">00</span>
+                  <span class="mark_co">:</span>
+                  <span class="txt_lg_co" id="min">00</span>
+                  <span class="mark_co">:</span>
+                  <span class="txt_sm_co" id="sec">00</span>
+                </div>
+              </div>
+            </div>
+            <div class="sws_text coun_text">
+              <div class="t_subtit">
+                <span class="t_subtit_span">스위스 완전일주</span>
+                <span>(7박 9일)</span>
+              </div>
+              <div class="t_subtag">
+                <span>#스위스일주</span>
+                <span>#쉴트호른</span>
+                <span>#스위스온천</span>
+                <span>#서유럽여행</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tk main_country">
+          <div class="main_tk main">
+            <div class="tracker">
+              <h3 class="Tokyo coun_tit">Tokyo</h3>
+              <div class="sub_tk coun_sub">
+                <img src="img/tokyo.png" alt="tokyo" />
+              </div>
+            </div>
+            <div class="co_clock_wrap">
+              <div class="co_clock_time">[현재 시각]</div>
+              <div class="co_clock">
+                <div class="time_box_co">
+                  <span class="txt_lg_co" id="hours2">00</span>
+                  <span class="mark_co">:</span>
+                  <span class="txt_lg_co" id="min2">00</span>
+                  <span class="mark_co">:</span>
+                  <span class="txt_sm_co" id="sec2">00</span>
+                </div>
+              </div>
+            </div>
+            <div class="tk_text coun_text">
+              <div class="t_subtit">
+                <span class="t_subtit_span">도쿄 패키지</span>
+                <span>(3박 4일)</span>
+              </div>
+              <div class="t_subtag">
+                <span>#전일관광</span>
+                <span>#후지산</span>
+                <span>#후지산온천</span>
+                <span>#하코네</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hw main_country">
+          <div class="main_hw main">
+            <div class="tracker">
+              <h3 class="Hawaiian coun_tit">Hawaiian</h3>
+              <div class="sub_hw coun_sub">
+                <img src="img/hawaiian.png" alt="hawaiian" />
+              </div>
+            </div>
+            <div class="co_clock_wrap">
+              <div class="co_clock_time">[현재 시각]</div>
+              <div class="co_clock">
+                <div class="time_box_co">
+                  <span class="txt_lg_co" id="hours3">00</span>
+                  <span class="mark_co">:</span>
+                  <span class="txt_lg_co" id="min3">00</span>
+                  <span class="mark_co">:</span>
+                  <span class="txt_sm_co" id="sec3">00</span>
+                </div>
+              </div>
+            </div>
+            <div class="hw_text coun_text">
+              <div class="t_subtit">
+                <span class="t_subtit_span">허니문 하와이</span>
+                <span>(7박 8일)</span>
+              </div>
+              <div class="t_subtag">
+                <span>#휴양지</span>
+                <span>#허니문</span>
+                <span>#빅아일랜드</span>
+                <span>#호놀룰루</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- end section1 -->
+      <!-- ticket -->
+      <div class="ticket">
+        <h3 class="ticket_tit">투어 찾기</h3>
+        <div class="country">
+          <div class="c_start">
+            <div class="start c_tit">출발지</div>
+            <div class="s_country sub_country">BUSAN</div>
+          </div>
+          <i class="fas fa-plane"></i>
+          <div class="c_end">
+            <div class="end c_tit">도착지</div>
+            <div class="e_country sub_country">Bern</div>
+          </div>
+        </div>
+        <div class="boder"></div>
+        <div class="conts">
+          <div class="conts_wrap">
+            <div class="conts_s tikCont">
+              <p>출발일</p><span>2024.06.14</span>
+            </div>
+            <div class="conts_e tikCont">
+              <p>도착일</p><span>2024.07.26</span>
+            </div>
+            <div class="conts_p tikCont">
+              <p class="person">인원</p><span>4</span>
+            </div>
+          </div>
+          <div class="conts_c">
+            <p>여행 컨셉</p>
+            <div class="concept">
+              <p>#관광</p>
+              <p>#자유여행</p>
+              <p>#허니문</p>
+              <p>#휴양</p>
+              <p>#한달살기</p>
+            </div>
+          </div>
+        </div>
+        <div class="conts_btn">
+          <a href="#">검색하기</a>
+        </div>
+      </div>
+      <img id="plane" src="img/plane.gif" alt="">
+    </section>
+    <!-- <iframe class="plane" src='https://my.spline.design/untitled-0f95409ec9f44477b87176163fa44e12/' frameborder='0' width='300px' height='300px'></iframe> -->
+    <!-- 3d model -->
+    <!-- <div class="canvas-cont">
+      <canvas id="canvas3d"></canvas>
+    </div> -->
+
+    <!-- 💛💛section2💛💛 -->
+    <section class="section2"></section>
+  </div>
+
+
+  <script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <!-- <script type="module" src="js/3d.js"></script> -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+.main-slick{}
+.main-slick .slick-slide{overflow: hidden;}
+.main-slick .slick-slide img{
+    right: -200%;
+    position: relative;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+.main-slick .slick-slide.slick-active img{
+    right: 0;
+    opacity: 1;
+}
+.main-slick .slick-slide .text{}
+.main-slick .slick-slide .text p:first-child{
+    position: relative;
+    opacity: 0;/* //넣어 주지 않으면 전에 작용된 글씨가 남아있음 */
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    left: -100%;
+}
+.main-slick .slick-slide .text p:last-child{
+    position: relative;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.8s;
+    bottom: -200px;
+}
+.main-slick .slick-slide.slick-active{} /* //현재페이지 */
+.main-slick .slick-slide.slick-active .text p:first-child{
+    opacity: 1;
+    left: 0;
+} 
+.main-slick .slick-slide.slick-active .text p:last-child{
+    opacity: 1;
+    bottom: 0;
+}

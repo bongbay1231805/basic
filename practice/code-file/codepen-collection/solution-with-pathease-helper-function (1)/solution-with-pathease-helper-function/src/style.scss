@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+main {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
+  .path-holder {
+   position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+    z-index: 9;
+  }
+  .circle {
+    width: 250px;
+    height: 250px;
+    background: red;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  
+  section {
+    position: absolute;
+    width: 100%;
+    background: rgba(0,0,0,0.95);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 85px;
+    color: white;
+    >div {
+      padding-left: 300px;
+    }
+    &.hero {
+      top: 0;
+      height: 1100px;
+      border-bottom: 5px solid red;
+    }
+    &.about {
+      top: 1105px;
+      height: 1300px;
+      border-bottom: 5px solid blue;
+    }
+    &.cta {
+      top: 2410px;
+      height: 2000px;
+      border-bottom: 5px solid green;
+    }
+    &.img {
+      top: 4415px;
+      height: 1500px;
+      border-bottom: 5px solid pink;
+    }
+    &.map {
+      top: 5920px;
+      height: 1570px;
+      border-bottom: 5px solid orange;
+    }
+    
+    &.prefoot {
+      top: 7495px;
+      height: 1450px;
+      border-bottom: 5px solid purple;
+    }
+  }
+  
+  
+}

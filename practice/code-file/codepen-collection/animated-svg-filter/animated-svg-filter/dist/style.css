@@ -1,0 +1,75 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: black;
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+	display: flex;
+	gap: 40px;
+}
+
+.effect {
+	width: 200px;
+	height: 400px;
+	z-index: 2;
+	position: relative;
+	transition-duration: 2s;
+}
+
+.effect:hover {
+	height: 300px;
+}
+.effect-1 {
+	background: linear-gradient(to top, #ff4500, #ffa500, #ffff00);
+	filter: url(#svg-effect-1);
+}
+
+.effect-2 {
+	background: linear-gradient(to top, #0000ff, #00ffff, #add8e6);
+	filter: url(#svg-effect-2);
+}
+
+.effect-3 {
+	background: linear-gradient(to top, #008000, #00ff00, #adff2f);
+	filter: url(#svg-effect-3);
+}
+
+.effect-4 {
+	background: linear-gradient(to top, #800080, #ff00ff, #dda0dd);
+	filter: url(#svg-effect-4);
+}
+
+.container {
+	position: relative;
+}
+
+.text-1 {
+	background: -webkit-linear-gradient(#ff4500, #ffa500);
+}
+.text-2 {
+	background: -webkit-linear-gradient(#0000ff, #00ffff);
+}
+
+.text-3 {
+	background: -webkit-linear-gradient(#008000, #00ff00);
+}
+
+.text-4 {
+	background: -webkit-linear-gradient(#800080, #ff00ff);
+}
+
+.text {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	text-transform: uppercase;
+	transform: translateX(-50%);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+}

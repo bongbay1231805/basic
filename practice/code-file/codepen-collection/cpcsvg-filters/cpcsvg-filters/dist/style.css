@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+}
+
+svg[height="0"] {
+  position: absolute;
+}
+
+body {
+  font-family: "Chakra Petch", sans-serif;
+  color: #060606;
+}
+body::before, body::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  inset: 0;
+  -webkit-mask: radial-gradient(at 25%, #fff, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
+  -webkit-mask-composite: source-in;
+  mix-blend-mode: color;
+}
+body::before {
+  background-color: #ffa899;
+  background-image: radial-gradient(at 98% 67%, #55adec 0px, transparent 50%), radial-gradient(at 79% 66%, #7c9df8 0px, transparent 50%), radial-gradient(at 98% 94%, #eded82 0px, transparent 50%), radial-gradient(at 51% 56%, #f29c5f 0px, transparent 50%), radial-gradient(at 13% 48%, #f29ccf 0px, transparent 50%), radial-gradient(at 37% 21%, #95f4c3 0px, transparent 50%), radial-gradient(at 22% 93%, #5df4ea 0px, transparent 50%);
+}
+body::after {
+  filter: url(#noiseFilter);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  width: 200px;
+}
+
+.sidebar {
+  padding-left: 0.5rem;
+}
+
+.button {
+  color: inherit;
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.button-wrapper {
+  width: 100%;
+  height: 50px;
+}
+.button-wrapper:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.button-wrapper:hover {
+  transform: scale(1.1) translateX(12px);
+  animation: 800ms shake ease-in-out infinite;
+}
+
+@keyframes shake {
+  0% {
+    filter: url(#shake-1);
+  }
+  25% {
+    filter: url(#shake-2);
+  }
+  50% {
+    filter: url(#shake-3);
+  }
+  75% {
+    filter: url(#shake-4);
+  }
+  100% {
+    filter: url(#shake-5);
+  }
+}

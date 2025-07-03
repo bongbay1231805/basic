@@ -1,0 +1,21 @@
+body {
+  margin: 0 auto;
+  width: 100%;
+}
+
+svg {
+  border-radius: 5px;
+  margin: 0 auto;
+  display: block;
+  height: 100vh;
+  filter: url("#goo");
+}
+
+@keyframes hue {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}

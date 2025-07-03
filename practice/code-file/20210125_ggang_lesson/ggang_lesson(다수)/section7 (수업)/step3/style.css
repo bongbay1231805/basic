@@ -1,0 +1,197 @@
+@charset "UFT-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+li,
+ul {
+    list-style: none;
+}
+
+.wrap {
+    position: relative;
+}
+
+
+.header_wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+
+.header_wrap .logo {
+    margin-top: 15px;
+    padding-left: 20px;
+    font-size: 24px;
+    color: #fff;
+}
+
+
+.box {
+    position: relative;
+    height: 100vh;
+    background-color: #111;
+}
+
+.box h2 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    color: #fff;
+    font-size: 80px;
+    line-height: 1;
+    text-align: center;
+}
+
+
+/* fix_motion */
+.fix_motion {
+    position: relative;
+    height:5000px;
+    /* //100vh보다 커야한다 원본 5000px */
+}
+
+.fix_motion .sticky_cont {
+    /* position: sticky;의 부모에게 overflow:hidden을 주지말기 */
+    overflow: hidden;
+    /* //꼭 overflow: hidden; 해야하면 본인에게 직접하기 */
+    position: sticky;
+    top: 0;
+    /* position: sticky;할때 반드시 적어주기 */
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.fix_motion .sticky_cont .cont_box {
+    /* overflow: hidden; */
+    position: relative;
+    height: 100%;
+}
+
+.fix_motion .sticky_cont .cont_box .intro_txt {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 60;
+    transform: translate(-50%, -50%);
+    transition: opacity .5s;
+}
+
+.fix_motion .sticky_cont .cont_box .intro_txt.active {
+    opacity: 0;
+}
+
+.fix_motion .sticky_cont .cont_box .intro_txt h2 {
+    font-size: 80px;
+    line-height: 1;
+    color: #fff;
+}
+
+.fix_motion .sticky_cont .cont_box .left_mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 50;
+    width: 50%;
+    height: 100%;
+    background: #000;
+}
+
+.fix_motion .sticky_cont .cont_box .right_mask {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 50;
+    width: 50%;
+    height: 100%;
+    background: #000;
+}
+
+.fix_motion .sticky_cont .cont_box .bg_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/steve_jobs.jpg');
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.fix_motion .sticky_cont .cont_box .ending_txt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 30;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.fix_motion .sticky_cont .cont_box .ending_txt:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    content: "";
+}
+
+.fix_motion .sticky_cont .cont_box .ending_txt.active {
+    opacity: 1;
+}
+
+
+
+.fix_motion .sticky_cont .cont_box .ending_txt:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+    content: "";
+}
+
+.fix_motion .sticky_cont .cont_box .ending_txt.active {
+    opacity: 1;
+}
+
+.fix_motion .sticky_cont .cont_box .ending_txt .tb_row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.fix_motion .sticky_cont .cont_box .ending_txt .tb_row .tb_cell {
+    
+    vertical-align: middle;
+    text-align: center;
+}
+
+.fix_motion .sticky_cont .cont_box .ending_txt .tb_row .tb_cell p {
+    font-size: 80px;
+    color: #000;
+    line-height: 1;
+}

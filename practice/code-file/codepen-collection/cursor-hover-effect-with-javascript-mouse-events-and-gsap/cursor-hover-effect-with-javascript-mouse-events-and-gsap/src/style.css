@@ -1,0 +1,83 @@
+:root {
+  --white: whitesmoke;
+  --yellow: #ffd60a;
+  --darkblue: #001d3d;
+}
+
+::selection {
+  background: var(--yellow);
+  color: var(--darkblue);
+}
+
+body {
+  margin: 10vh 0;
+  font: 20px / 28px "Nunito", sans-serif;
+  color: var(--yellow);
+  background: var(--darkblue);
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+section + section {
+  margin-top: 10vh;
+}
+
+.copyright .col-auto:not(:last-child) {
+  position: relative;
+}
+
+.copyright .col-auto:not(:last-child)::before {
+  content: "•";
+  position: absolute;
+  top: 50%;
+  right: -7.5px;
+  transform: translateY(-50%);
+}
+
+.line-animation,
+.line-animation:hover {
+  color: var(--white);
+}
+
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.cursor-bee {
+  top: -15px;
+  left: -13px;
+  z-index: -1;
+}
+
+.cursor-eye {
+  top: -50px;
+  left: -50px;
+  padding: 20px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: var(--darkblue);
+}
+
+
+/* FOOTER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.page-footer {
+  position: fixed;
+  right: 0;
+  bottom: 60px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding: 5px;
+  color: black;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.page-footer a {
+  display: flex;
+  margin-left: 9px;
+}

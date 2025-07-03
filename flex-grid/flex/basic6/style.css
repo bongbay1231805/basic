@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+*{margin: 0; padding: 0;
+box-sizing: border-box;}
+
+.container{border: 2px solid #000;
+background-color: yellow;
+}
+
+.container .item{
+border: 2px solid #000;
+background-color: green;
+}
+
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+
+    /* 아이템들이 2줄이상일때 수직축 방향 정렬 */
+    align-content: stretch;/* 기본값 */
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: space-between;
+    align-content: space-around;
+    align-content: space-evenly;/* 균등하게 대등하게 */
+}
+.item{}

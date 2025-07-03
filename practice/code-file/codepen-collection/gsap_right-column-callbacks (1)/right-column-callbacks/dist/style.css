@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+}
+
+.column-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.column {
+  flex: 1 0 50%;
+  min-height: 100vh;
+}
+
+.column.right {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.column-content {
+  width: 100%;
+  height: 100vh;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark);
+}
+
+.column-content.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

@@ -1,0 +1,35 @@
+.box {
+  padding: 20px;
+  border: 5px solid black;
+  border-radius: 20px;
+}
+
+.box > .box {
+  border-color: #ccc;
+}
+.box > .box:hover {
+  background-color: green;
+}
+.box > .box .box {
+  border-color: #ccc;
+}
+.box > .box .box:hover {
+  background-color: purple;
+}
+.box > .box .box > span {
+  font-size: 20px;
+}
+@media (max-width: 767px) {
+  .box > .box .box > span {
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px) {
+  .box > .box {
+    font-size: 16px;
+  }
+}
+
+.box > .box > .box {
+  font-size: 12px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,33 @@
+//nesting 품다
+.box{
+    padding: 20px;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+.box{
+    >.box{
+        border-color: #ccc;
+        &:hover{ //&는 &가 포함된 {}까지의 부모 경로
+            background-color: green;
+        }
+        .box{
+            border-color: #ccc;
+            &:hover{
+                background-color: purple;
+            }
+            &>span{
+                font-size: 20px;
+                @media (max-width:767px) {
+                    font-size: 14px;
+                }
+            }
+        }
+        @media (max-width:400px){
+            font-size: 16px;
+        }
+    }
+}
+
+.box>.box{
+    &>.box{font-size: 12px;}
+}

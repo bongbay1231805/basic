@@ -1,0 +1,30 @@
+html, body{
+	margin: 0;
+	padding: 0;
+}
+body {
+	display: flex;
+}
+body:before{
+	content: "";
+	height: 100vh;
+	width: 100vw;
+	z-index: -1;
+	background: #2595ff;
+	position: absolute;
+}
+.waterHere {
+	width: 100%;
+	height: 100vh;
+	filter: url("#crumple-effect");
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto;
+	gap: 15px;
+}
+.waterHere div{
+	background: #2575dd;
+	border-radius: 50%;
+}
+svg{
+	position: absolute;
+}

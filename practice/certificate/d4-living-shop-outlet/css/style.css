@@ -1,0 +1,157 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0;box-sizing: border-box;}
+body{
+    background-color: #fff;
+    color: #333;
+}
+li{list-style: none;}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+#wrap{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#aside{
+    width: 200px;
+    height: 800px;
+}
+#aside .logo{
+    width: 100%;
+    height: 15%;
+    background-color: #111;
+}
+#aside .nav{
+    width: 100%;
+    height: 85%;
+    background-color: #222;
+}
+.nav>ul{}
+.nav>ul>li{
+    position: relative;
+}
+.nav>ul>li>a{
+    display: inline-block;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    background-color: olivedrab;
+}
+.nav>ul>li>a:hover{
+    background-color: rgb(77, 103, 23);
+}
+.nav>ul>li>ul{
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 200px;
+    z-index: 100;
+}
+.nav>ul>li>ul>li{
+}
+.nav>ul>li>ul>li>a{
+    display: inline-block;
+    padding: 10px;
+    width: 133px;
+    text-align: center;
+}
+.nav>ul>li>ul>li>a:hover{
+    background-color: rgb(122, 145, 76);
+}
+
+#slider::before{
+    content: "";
+    width: 100%;
+    background-color: rgb(168, 198, 108);
+    height: 0;
+    position: absolute;
+    top: 120px;
+    left: 0;
+}
+#slider.on::before{
+    height: calc(41px*4);
+}
+
+
+#main{
+    width: calc(100% - 200px);
+    height: 800px;
+}
+#slider{
+    width: 100%;
+    height: 400px;
+}
+#slider .sliderWrap{
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+#slider .sliderWrap .slider{
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 400px;
+}
+#slider .sliderWrap .slider.s1{
+    background: url(../img/slider1.jpg) no-repeat center/cover;
+}
+#slider .sliderWrap .slider.s2{
+    background: url(../img/slider2.jpg) no-repeat center/cover;
+}
+#slider .sliderWrap .slider.s3{
+    background: url(../img/slider3.jpg) no-repeat center/cover;
+}
+
+
+#link{
+    width: 100%;
+    height: 150px;
+    background-color: #444;
+}
+#contents{
+    width: 100%;
+    height: 250px;
+    display: flex;
+}
+.notice{
+    width: 50%;
+    height: 250px;
+    background-color: #555;
+}
+.gallery{
+    width: 50%;
+    height: 250px;
+    background-color: #666;
+}
+
+#footer{
+    width: 100%;
+    display: flex;
+}
+#footer .f_left{
+    width: 200px;
+    height: 120px;
+    background-color: #777;
+}
+#footer .f_center{
+    width: calc(100% - 400px);
+}
+#footer .f_center .menu{
+    width: 100%;
+    height: 60px;
+    background-color: #888;
+}
+#footer .f_center .copy{
+    width: 100%;
+    height: 60px;
+    background-color: #999;
+}
+#footer .f_fs{
+    width: 200px;
+    height: 120px;
+    background-color: pink;
+}

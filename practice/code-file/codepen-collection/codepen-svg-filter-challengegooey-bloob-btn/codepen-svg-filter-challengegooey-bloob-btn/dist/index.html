@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Codepen SVG filter challenge - Gooey bloob btn</title>
+  <link rel='stylesheet' href='https://fonts.googleaphttps://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.cssis.com/css2?family=Zeyada&amp;display=swap'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="btn flex justify-center items-center">
+    <p>CLICK ME</p>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feBlend in="SourceGraphic" in2="goo" />
+        </filter>
+    </defs>
+</svg>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 20px 10px;
+    background: #1d1e22;
+    text-align: center;
+    font-family: Montserrat, Helvetica Neueu, Helvetica, Arial, sans-serif;
+}
+
+.skill_wrap {
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+
+.skill_wrap .skill {
+    display: flex;
+    width: 1024px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.skill_wrap .skill>div {
+    width: 20%;
+    position: relative;
+}
+
+.skill_wrap .skill>div h3 {
+    color: orange;
+    font-size: 30px;
+}
+
+.progress {
+    --color: orange;
+}
+.circle-progress{width: 100%; height: auto;}
+.circle-progress-value {
+    stroke-width: 6px;
+    stroke: var(--color);
+    stroke-dasharray: 6 2;
+}
+
+.circle-progress-circle {
+    stroke-width: 6px;
+    stroke: #17181c;
+}
+
+.circle-progress-text {
+    font-weight: bold;
+    fill: var(--color);
+}
+
+input[type=range] {
+    display: none;
+}
+
+a {
+    color: #75798a;
+    text-decoration: none
+}
